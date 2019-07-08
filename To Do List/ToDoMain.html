@@ -1,0 +1,66 @@
+<html>
+    <link href="ToDoMain.css" rel="stylesheet" type="text/css"></link>
+    
+
+<body>
+
+<div class = "wrapper">
+
+
+<div  id= "sidebar">side div
+
+        <p for="search">Task 1
+            search</p>
+        <input id= "search" type="search">
+</div>
+
+
+<div id= "parent">parent div
+<p for="task">Add a new Task...</p>
+<input id="task" type="text">
+</div>
+
+
+<div  id= "middle">middle div
+
+<progress id = "progressBar" value="88" max="100"></progress>
+<p id = "text1" for="objective">Task 1
+    Add a new objective...</p>
+<input id= "objective" type="text">
+
+
+<label for="appt">Due</label>
+
+
+<input type="checkbox"  id="tickBox"  onclick="return strikeThrough()">
+
+</div>
+
+
+</div>
+
+<!--this allows search bar to stay at the top
+class ="sticky-header-container" -->
+
+
+            
+              
+                   
+
+                    <script src="jsonPromise.js"></script> 
+                    <script src="UserDetails.js"></script>
+
+
+</body>
+
+</html>
+
+<!-- 
+Q) When task is completed does it vanish or get 'striked through'?    
+Q) Account details: Username, password, email, name
+Additional Functionality: Searchbar, due date, add image, 
+progress bar, scroll bar on the left side panel, ability to delete tasks)
+
+<input type="time" id="appt" name="appt"
+       min="9:00" max="18:00" required>
+-->

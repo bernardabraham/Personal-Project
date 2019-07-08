@@ -1,0 +1,31 @@
+<html>
+   
+
+<head>
+
+    </head>
+    <body>
+        <form onsubmit="return handleSubmit(this);" action="">
+<p for="username">Username</p>
+<input id="username" type="text">
+<p for="username">Password</p>
+<input id= "password" type="password">
+<p for="username">First Name</p>
+<input id="username" type="text">
+<p for="username">Last Name</p>
+<input id= "password" type="text">
+
+
+</form>
+        
+        <button id="deleteButton" onclick="return deleteUser()">Delete</button>
+        //deletes user details and sends you to login page
+
+<button id="registerButton" onclick="return registerUser()">Register</button> //send you to details
+
+        <script src="jsonPromise.js"></script> //this is the JSON script
+        <script src="LoginPage.js"></script>
+
+
+    </body>
+</html>
