@@ -17,19 +17,36 @@
 //9) a link to the account settings page
 //10) a link to the register page
 
-function taskInput1(method, url, username) {
+function taskInput1() {
 /*on submit prepends a line of text above the input box with
 a check box next to it and moves the input element down 
 */
+member = "hi";
+member = document.getElementById("task1").value;
+const childDiv = document.createElement('div2');
+childDiv.innerText = member + "\n";
+parent1.append(childDiv);
+document.getElementById('task1').value = ''
+console.log(member);
+//para2.appendChild(member);
+//document.getElementById("parent1").appendChild(member);
+//parent1.innerText = member;
+
 }
-function saveTask{
+function runScript(e){
+    if (e.keyCode == 13) {
+        var tb = document.getElementById("task1");
+        document.getElementById("submit1").click();
+        return false;
+    }
+}
+// function saveTask{
     /* on submit it saves the form to a new variable1
     whos name increases by 1 each time  
 */
-}
-function requestTask{
-    on submit 
-}
+// }
+// function requestTask{
+// }
 
 function taskList2(method, url, username) {
 }
@@ -59,11 +76,12 @@ function strikeThrough(){
 
 }
 
-function progressBar{
 
-    v = parseInt(document.getElementById("progress").value);
-    m = parseInt(document.getElementById("progress").value);
-    progress = (v/v+m)*100
-    document.getElementById("progressBar").value
-}
 
+// function progressBar{
+
+//     v = parseInt(document.getElementById("progress").value);
+//     m = parseInt(document.getElementById("progress").value);
+//     progress = (v/v+m)*100
+//     document.getElementById("progressBar").value
+// }
