@@ -16,24 +16,61 @@
 //8) potentially a drop down menu were you choose a difficult 1-5 
 //9) a link to the account settings page
 //10) a link to the register page
+let v = 0;
+let m = 0;
 
 function taskInput1() {
-/*on submit prepends a line of text above the input box with
-a check box next to it and moves the input element down 
-*/
-member = "hi";
-member = document.getElementById("task1").value;
-const childDiv = document.createElement('div2');
-childDiv.innerText = member + "\n";
-parent1.append(childDiv);
-document.getElementById('task1').value = ''
-console.log(member);
-//para2.appendChild(member);
-//document.getElementById("parent1").appendChild(member);
-//parent1.innerText = member;
 
+    /*on submit prepends a line of text above the input box with
+    a check box next to it and moves the input element down 
+    */
+    member = "hi";
+    member = document.getElementById("task1").value;
+    const childPara = document.createElement('p');
+    const checkBox = document.createElement("input");
+    m++
+    checkBox.setAttribute('type', 'checkbox' /*, 'onclick', 'return strikeThrough()' */);
+
+    checkBox.addEventListener('click', (ev) => {
+        if (ev.target.checked) {
+            ev.target.parentElement.style.textDecoration = "line-through";
+            v++
+        } else {
+            ev.target.parentElement.style.textDecoration = "none";
+            v--
+        }
+        progressBar()
+    });
+
+    childPara.innerText = member;
+    childPara.append(checkBox);
+    parent1.append(childPara);
+    // document.getElementById("parent1").append(childDiv);
+    // document.getElementById("parent1").append(checkBox);
+    document.getElementById('task1').value = ''
+    console.log(member);
+    //para2.appendChild(member);
+    //document.getElementById("parent1").appendChild(member);
+    //parent1.innerText = member;
+    progressBar();
+    // console.log(m);
+    // console.log(v);
 }
-function runScript(e){
+function progressBar() {
+    // console.log(m);
+    // console.log(v);
+    // v = parseInt(document.getElementById("progress").value);
+    // m = parseInt(document.getElementById("progress").value);
+
+    let progress = (v / m) * 100;
+    document.getElementById("progressBar").value = progress;
+    progressInt = parseInt(progress)
+    document.getElementById("progress1").innerText = progressInt + "%";
+    // console.log(progressInt)
+}
+
+
+function runScript(e) {
     if (e.keyCode == 13) {
         var tb = document.getElementById("task1");
         document.getElementById("submit1").click();
@@ -41,8 +78,8 @@ function runScript(e){
     }
 }
 // function saveTask{
-    /* on submit it saves the form to a new variable1
-    whos name increases by 1 each time  
+/* on submit it saves the form to a new variable1
+whos name increases by 1 each time  
 */
 // }
 // function requestTask{
@@ -63,25 +100,19 @@ function progressBar7(method, url, username) {
 function difficultySelect8(method, url, username) {
 }
 function accountSettings9(method, url, username) {
-    window.location = 'ToDoLogin.html'; 
+    window.location = 'ToDoLogin.html';
 }
 function registerPage10(method, url, username) {
-    window.location = 'ToDoRegister.html'; 
+    window.location = 'ToDoRegister.html';
 }
 
 // adds a class to the text that has a strikethrough
-function strikeThrough(){
-    
-    document.getElementById("text1").className = "strikeThrough"
+function strikeThrough() {
+
+    var ele = document.getElementByClassName("task1");
+    ele.style.setProperty("text-decoration", "line-through");
 
 }
 
 
 
-// function progressBar{
-
-//     v = parseInt(document.getElementById("progress").value);
-//     m = parseInt(document.getElementById("progress").value);
-//     progress = (v/v+m)*100
-//     document.getElementById("progressBar").value
-// }
