@@ -1,0 +1,12 @@
+package hello2;
+
+public class App {
+	public static void main(String[] args) {
+		String output = "hello world";
+		//System.out.println(output);
+		FirstMethod hw = new FirstMethod();
+		hw.firstMethod(output);
+		System.out.println(hw.getMessage());
+	}
+	
+}

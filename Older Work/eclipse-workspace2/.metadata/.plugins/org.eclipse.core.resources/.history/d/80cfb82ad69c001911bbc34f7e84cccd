@@ -1,0 +1,49 @@
+package qa.com.TddLibrary2;
+
+import static org.junit.Assert.*;
+
+import org.junit.Test;
+
+public class LibTest {
+
+	private Library lib = new Library();
+//	new Book("Harry Potter", "J.K Rowling", 223, 3.99, "Out");
+//	new Book("Lord Of The Rings", "J.R Tolkien",1241, 19.99, "In");
+	Book moby = new Book("Moby Dick", "Herman Melville", 378, 9.99, "In", 0);
+	Book gatsby = new Book("The Great Gatsby", "F.Scott Fitzgerald", 144, 2.50, "In");
+
+	
+
+	@Test
+	public void testCheckOut() {
+		assertEquals("Out", lib.checkOut(moby));
+	}
+	@Test
+	public void testCheckIn() {
+		assertEquals("In", lib.checkIn(gatsby));
+	}
+	@Test
+	public void testAddItem() {
+		assertTrue(this.lib.addItem(new Book("Harry Potter", "J.K Rowling", 223, 3.99, "Out")));
+	}
+	@Test
+	public void testRemoveItem() {
+		assertTrue(this.lib.removeItem(new Book("Harry Potter", "J.K Rowling", 223, 3.99, "Out")));
+	}
+
+	@Test
+	public void testUpdateItem() {
+		assertTrue(this.lib.updateItem(1, 0.99));
+	}
+//	@Test
+//	public void test6() {
+//		assertEquals(True, lib.registerPerson("Joe"));
+//	}
+//	@Test
+//	public void test7() {
+//		assertEquals(null, lib.deletePerson("Peter"));
+//	}
+//	@Test
+//	public void test8() {
+		//assertEquals("something", lib.updatePerson("Steve"));
+	}

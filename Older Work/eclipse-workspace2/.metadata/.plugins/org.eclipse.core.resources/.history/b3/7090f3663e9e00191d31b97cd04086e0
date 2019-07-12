@@ -1,0 +1,26 @@
+package qa.com.Hospital;
+
+public class JuniorDoctor extends Doctors {
+	
+	private int grade;
+
+	public JuniorDoctor(String name, String role, int age, int grade) {
+		super(name, role, age);
+		this.grade = grade;
+	}
+
+	public int getGrade() {
+		return grade;
+	}
+
+	public void setGrade(int grade) {
+		
+		this.grade = grade;
+	}
+	
+	
+	}
+
+	
+	
+

@@ -1,0 +1,17 @@
+
+
+const req = new XMLHTTPRequest()
+
+req.onload = () => function(){ //its anonymous so doesn't need a name
+console.log('It worked!', req.responseText);
+
+
+    if(req.status === 200){
+        console.log(req.responseText);
+    } else {
+        console.log('handle error')
+    }
+}
+
+req.open('GET','https://raw.githubusercontent.com/ewomackQA/JSONDataRepo/master/example.json')
+req.send();

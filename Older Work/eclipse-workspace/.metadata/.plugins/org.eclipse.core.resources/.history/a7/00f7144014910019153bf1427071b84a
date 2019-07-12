@@ -1,0 +1,19 @@
+package hello2;
+
+public class MathClass { // creates a new class
+	
+
+	public int addNumber(int a, int b) { // creates a method signature
+		return a + b; // method body
+	}
+	
+	public int multiplyNumber(int a, int b) { // creates a method signature
+		return a * b; 
+	}
+	public double divideNumber(double a, double b) { // creates a method signature
+		if a>b;
+		return a / b; 
+		else
+			return string "The division cannot be performed";
+	}
+}

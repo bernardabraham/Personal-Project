@@ -1,0 +1,9 @@
+package Animal;
+
+public class FourInARowApp {
+public static void main(String[] args) {
+	
+	FourInARow.setBoard();
+	
+}
+}

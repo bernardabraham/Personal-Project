@@ -1,0 +1,21 @@
+package com.qa.Goldilocks;
+
+import static org.junit.Assert.*;
+
+import org.junit.Test;
+
+public class GoldilocksTest {
+	
+	@Test
+	public void test1() {
+		
+		WeightTemperature goldilocks = new WeightTemperature(50, 60);
+		WeightTemperature chairPorridge = new WeightTemperature(70, 80);
+		
+		goldilocks.goldilocksMethod(chairPorridge);
+		assertEquals("", true, goldilocks.goldilocksMethod(chairPorridge) );
+		
+	}
+		
+
+}

@@ -1,0 +1,26 @@
+package qa.com.TddLibrary2;
+
+public class Map extends Item {
+	private String area;
+	private int size;
+	public Map(int pages, int cost, String area, int size) {
+		super(pages, cost);
+		this.area = area;
+		this.size = size;
+	}
+	public String getArea() {
+		return area;
+	}
+	public void setArea(String area) {
+		this.area = area;
+	}
+	public int getSize() {
+		return size;
+	}
+	public void setSize(int size) {
+		this.size = size;
+	}
+
+
+
+}

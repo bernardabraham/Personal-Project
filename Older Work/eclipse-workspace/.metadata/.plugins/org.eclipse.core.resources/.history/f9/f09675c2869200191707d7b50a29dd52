@@ -1,0 +1,22 @@
+package garage;
+
+public class asdfsd {
+	public static void main(String[] args) {
+
+		int a = 100; // room size
+		int b = 1000; // price
+		int c = 30; // size of tin
+		int leastWaste = c - (a % c);
+		System.out.println(leastWaste);
+
+		if (a % c != 0) {
+			int cheapest = (a / c + 1) * b;
+			System.out.println(cheapest);
+		} else {
+			int cheapest = (a / c) * b;
+			System.out.println(cheapest);
+		}
+
+	}
+
+}

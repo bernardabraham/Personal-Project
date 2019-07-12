@@ -1,0 +1,25 @@
+package com.qa.Goldilocks;
+
+import static org.junit.Assert.assertEquals;
+
+import java.util.Arrays;
+import java.util.List;
+
+import org.junit.Test;
+
+public class GoldilocksTest {
+
+	@Test
+	public void test1() {
+
+		WeightTemperature goldilocks = new WeightTemperature(50, 60);
+		WeightTemperature chairPorridge = new WeightTemperature(70, 50);
+
+		List<WeightTemperature> list2 = Arrays.asList(new WeightTemperature(70, 50), new WeightTemperature(80, 60));
+
+		// goldilocks.goldilocksMethod(chairPorridge);
+		assertEquals("", true, goldilocks.goldilocksMethod(list2));
+
+	}
+
+}

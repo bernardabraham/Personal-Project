@@ -1,0 +1,47 @@
+package hello2;
+
+public class Results {
+
+	public String printResult(int a, int b, int c) { // creates a method signature
+		if (a < 150 & b < 150 & c < 150) {
+			return "your mark is " + a + "\nyour mark is " + b + "\nyour mark is " + c;
+		} else {
+			return "Mark entered incorrectly";
+		}
+	}
+
+	// displays results
+
+	public String averagePercentage(int a, int b, int c) {
+
+		if (a < 150 & b < 150 & c < 150) {
+
+			return "your average mark is " + (a + b + c) * 100 / 450;
+			if (((a + b + c) * 100 / 450) > 60) {
+				return "you have passed";
+			} else
+				return "you have failed";
+		}
+
+		else
+
+		{
+			return "Mark entered incorrectly";
+		}
+
+	}
+	// finds average mark
+	
+
+	public String averagePercentage2(int a, int b, int c) {
+		System.out.println(printResult(a, b, c));
+		int average = ((a + b + c) * 100 / 450);
+		System.out.println("Average: " + average);
+		if (average > 60) {
+			return "you have passed";
+		} else {
+			return "you have failed";
+		}
+	}
+}
+}

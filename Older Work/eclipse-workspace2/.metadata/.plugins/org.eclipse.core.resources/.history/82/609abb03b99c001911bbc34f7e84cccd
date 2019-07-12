@@ -1,0 +1,30 @@
+package qa.com.TddLibrary2;
+
+public class Library {
+	
+	public void checkOut() {
+		//set checked status to out
+		
+	}
+	public void checkIn() {
+		//set checked status to out	
+		}
+	public void addItem() {
+		collection.add(greatGatsby);
+		
+	}
+	public void removeItem() {
+		
+	}public void updateItem() {
+		
+	}
+	public void registerPerson() {
+		
+	}
+	public void deletePerson() {
+		
+	}
+	public void updatePerson() {
+	
+}
+}

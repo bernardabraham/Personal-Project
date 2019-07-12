@@ -1,0 +1,43 @@
+package qa.com.TddLibrary2;
+
+import static org.junit.Assert.assertEquals;
+
+import org.junit.Test;
+
+public class LibTest {
+	
+	private Library lib = new Library();
+	
+	
+	public void testAddItem() {
+		assertTrue(this.lib.addItem(new Book("Harry Potter", "J.K Rowling", 223, 3.99)));
+	}
+	
+	@Test
+	public void test1() {
+		assertEquals("out", lib.checkOut(""));
+
+	@Test
+	public void test2() {
+		assertEquals("in", lib.checkIn("harryPotter"));
+	@Test
+	public void test3() {
+		assertEquals(True, lib.addItem("theGreatGatsby"));
+	@Test
+	public void test4() {
+		assertEquals(False, lib.removeItem("theGreatGatsby"));
+	@Test
+	public void test5() {
+		assertEquals(1.99, lib.updateItem("lordOfTheRings"));
+	@Test
+	public void test6() {
+		assertEquals(True, lib.registerPerson("Joe"));
+	@Test
+	public void test7() {
+		assertEquals(null, lib.deletePerson("Peter"));
+				
+	@Test
+	public void test8() {
+		assertEquals("something", lib.updatePerson("Steve"));
+
+}

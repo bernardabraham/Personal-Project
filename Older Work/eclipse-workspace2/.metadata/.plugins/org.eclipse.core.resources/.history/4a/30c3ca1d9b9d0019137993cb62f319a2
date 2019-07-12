@@ -1,0 +1,21 @@
+package Animal;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class Cage<T extends Animal> {
+
+			private T cagedAnimal;
+
+			public T getT() {
+				return cagedAnimal;
+			}
+
+			public void setT(T t) {
+				this.cagedAnimal = t;
+			}
+			
+	
+}
+
+

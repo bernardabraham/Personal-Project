@@ -1,0 +1,15 @@
+package hello2;
+
+public class FirstClass {
+	
+	private String message = "question 2";
+
+	public void firstMethod(String message) {
+		System.out.println(message);
+	}
+	
+	public String getMessage() {
+		return message;
+	}
+
+}

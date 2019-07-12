@@ -1,0 +1,97 @@
+package qa.com.TddLibrary2;
+
+public abstract class Item {
+
+	private int pages;
+	private double cost;
+	private boolean available;
+	private int id;
+
+	public Item(int pages, double cost, boolean available, int id) {
+		super();
+		this.pages = pages;
+		this.cost = cost;
+		this.available = available;
+		this.id = id;
+	}	
+	public Item(int pages, double cost, boolean available) {
+		super();
+		this.pages = pages;
+		this.cost = cost;
+		this.available = available;
+	}
+
+	public int getPages() {
+		return pages;
+	}
+
+	public void setPages(int pages) {
+		this.pages = pages;
+	}
+
+	public double getCost() {
+		return cost;
+	}
+
+	public void setCost(double cost) {
+		this.cost = cost;
+	}
+
+	public void setAvailable(boolean available) {
+		this.available = available;
+	}
+
+	public boolean getAvailable() {
+		return available;
+	}
+
+	public void setID(int id) {
+		this.setId(id);
+	}
+
+	public int getID() {
+		return this.getId();
+	}
+
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + (available ? 1231 : 1237);
+		long temp;
+		temp = Double.doubleToLongBits(cost);
+		result = prime * result + (int) (temp ^ (temp >>> 32));
+		result = prime * result + id;
+		result = prime * result + pages;
+		return result;
+	}
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Item other = (Item) obj;
+		if (available != other.available)
+			return false;
+		if (Double.doubleToLongBits(cost) != Double.doubleToLongBits(other.cost))
+			return false;
+		if (id != other.id)
+			return false;
+		if (pages != other.pages)
+			return false;
+		return true;
+	}
+	
+	
+
+}

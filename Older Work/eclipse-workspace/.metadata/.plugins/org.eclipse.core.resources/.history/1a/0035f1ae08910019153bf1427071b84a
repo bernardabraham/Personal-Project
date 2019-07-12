@@ -1,0 +1,15 @@
+package hello2;
+
+public class App {
+	
+		
+		public static void main(String[] args) {
+			MathClass mc = new MathClass();
+			int a=mc.getnumber(4, 3);
+			System.out.println(a);
+		}
+		
+		
+	}
+	
+

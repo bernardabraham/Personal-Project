@@ -1,0 +1,5 @@
+package testing.factorials;
+
+public class FactorialTest {
+
+}

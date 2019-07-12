@@ -1,0 +1,44 @@
+package qa.com.Hospital;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class Hospital {
+
+	private List<Patient> patientList = new ArrayList<>();
+	private List<Doctor> doctorList = new ArrayList<>();
+	// private List<Teams> teamList = new ArrayList<>();
+
+	public List<Doctor> returnDoctors() {
+
+		return doctorList;
+		// print list of doctors
+	}
+
+	public boolean addDoctor(Doctor doctor) {
+		if (Doctor.getGrade() > 3) {
+			doctor.setSeniority("consultant");
+		}else { doctor.setSeniority("junior");
+		}
+		
+		return doctorList.add(doctor);
+	}
+
+	public List<Patient> returnPatients() {
+		// print lit of patients]
+		return patientList;
+	}
+
+	public void returnTeams() {
+		// print list of teams
+	}
+
+	public void gradeCheck() {
+		// check grade is over 3
+	}
+
+	public void consultantTeamCheck() {
+		// check there's a consultant in the team
+	}
+
+}

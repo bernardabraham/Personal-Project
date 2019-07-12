@@ -1,0 +1,13 @@
+package Animal;
+
+public class AnimalApp {
+	public static void main(String[] args) {
+		
+		Cage<Mammal> cage = new cage<>;
+		
+		cage.setCageAnimal(new mammal);
+		
+		System.out.println(cage.getCageAnimal());
+	}
+
+}

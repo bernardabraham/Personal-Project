@@ -1,0 +1,32 @@
+package qa.com.TddLibrary2;
+
+public abstract class Item {
+	
+	private int pages;
+	private double cost;
+	
+	public Item(int pages, double cost) {
+		super();
+		this.pages = pages;
+		this.cost = cost;
+	}
+
+	public int getPages() {
+		return pages;
+	}
+
+	public void setPages(int pages) {
+		this.pages = pages;
+	}
+
+	public double getCost() {
+		return cost;
+	}
+
+	public void setCost(double cost) {
+		this.cost = cost;
+	}
+	
+	
+	
+}

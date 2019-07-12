@@ -1,0 +1,19 @@
+package hello2;
+
+public class Results {
+	public int result();
+	
+	
+	if (a<150 & b<150 & c<150);
+	return string "your mark is a" /n "your mark is b" /n "your mark is c";
+							
+	else system.out.print"Mark entered incorrectly";
+	//displays results
+	
+	if (a<150 & b<150 & c<150);
+	return (a + b + c) / 3;
+	
+	else system.out.print"Mark entered incorrectly";
+	//displays average percentage
+
+}

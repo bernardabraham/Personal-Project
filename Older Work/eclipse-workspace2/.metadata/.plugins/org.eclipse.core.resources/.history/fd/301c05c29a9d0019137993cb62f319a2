@@ -1,0 +1,28 @@
+package Animal;
+
+import garage.Vehicle;
+
+public class Mammal extends Animal {
+	
+
+		private String carmake;
+		private int noOfDoors;
+
+		public void carmake(String carmake) {
+			this.carmake = carmake;
+		}
+
+		public String carmake() {
+			return carmake;
+		}
+
+		public void noOfDoors(int noOfDoors) {
+			this.noOfDoors = noOfDoors;
+		}
+
+		public int noOfDoors() {
+			return noOfDoors;
+		}
+	}
+
+}

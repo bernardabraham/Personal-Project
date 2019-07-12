@@ -1,0 +1,18 @@
+package testing.factorials;
+
+import static org.junit.Assert.assertEquals;
+
+import org.junit.Test;
+
+import factorial.Factorial;
+
+public class FactorialTest {
+
+	private Factorial fact = new Factorial();
+
+	@Test
+	public void test1() {
+		assertEquals("", true, 0 < fact.factorialAK(120));
+	}
+
+}

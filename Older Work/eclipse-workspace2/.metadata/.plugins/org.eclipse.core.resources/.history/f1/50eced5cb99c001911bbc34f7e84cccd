@@ -1,0 +1,43 @@
+package qa.com.TddLibrary2;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class Library {
+
+	List<Item> collection = new ArrayList<>();
+
+	public void checkOut() {
+		// set checked status to out
+
+	}
+
+	public void checkIn() {
+		// set checked status to out
+	}
+
+	public boolean addItem(Item item) {
+		return collection.add(item);
+
+	}
+
+	public void removeItem() {
+
+	}
+
+	public void updateItem() {
+
+	}
+
+	public void registerPerson() {
+
+	}
+
+	public void deletePerson() {
+
+	}
+
+	public void updatePerson() {
+
+	}
+}

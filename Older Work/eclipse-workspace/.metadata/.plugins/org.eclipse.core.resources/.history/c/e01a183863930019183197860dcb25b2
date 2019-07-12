@@ -1,0 +1,47 @@
+package com.qa.Goldilocks;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class WeightTemperature {
+	private int weight;
+	private int temperature;
+
+	public WeightTemperature(int weight, int temperature) {
+		super();
+		this.weight = weight;
+		this.temperature = temperature;
+
+		List<Integer> goldilocks = new ArrayList<>();
+
+	}
+
+	public boolean goldilocksMethod(List<WeightTemperature> list) {
+
+		for(int i=0; i < list.size(); i++) {
+			
+			
+		if (weight <= list.get(i).getWeight() && temperature >= list.get(i).getTemperature()) {
+			System.out.println("well done");
+			return true;
+		}
+		return false;
+		
+		}
+
+	public int getWeight() {
+		return weight;
+	}
+
+	public void setWeight(int Weight) {
+		this.weight = Weight;
+	}
+
+	public int getTemperature() {
+		return temperature;
+	}
+
+	public void setTemperature(int temperature) {
+		this.temperature = temperature;
+	}
+}

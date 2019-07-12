@@ -1,0 +1,22 @@
+package com.qa.Doggo;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class DogComp {
+
+	public String CompetitionTime(int position) {
+		String loserString= "";
+		for (int i = 0; i <= 100; i++) {
+			if (i == position) {
+
+			} else if (i != position) {
+				loserString += i;
+
+			}
+
+		}
+		return loserString;
+		
+	}
+}

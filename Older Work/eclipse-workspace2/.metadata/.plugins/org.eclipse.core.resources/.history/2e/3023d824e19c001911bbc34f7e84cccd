@@ -1,0 +1,52 @@
+package qa.com.TddLibrary2;
+
+public class Map extends Item {
+	private String area;
+	private int size;
+	public Map(int pages, int cost, String area, int size, boolean available, int id) {
+		super(pages, cost, available, id);
+		this.area = area;
+		this.size = size;
+	}
+	public String getArea() {
+		return area;
+	}
+	public void setArea(String area) {
+		this.area = area;
+	}
+	public int getSize() {
+		return size;
+	}
+	public void setSize(int size) {
+		this.size = size;
+	}
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = super.hashCode();
+		result = prime * result + ((area == null) ? 0 : area.hashCode());
+		result = prime * result + size;
+		return result;
+	}
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (!super.equals(obj))
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Map other = (Map) obj;
+		if (area == null) {
+			if (other.area != null)
+				return false;
+		} else if (!area.equals(other.area))
+			return false;
+		if (size != other.size)
+			return false;
+		return true;
+	}
+
+
+
+}

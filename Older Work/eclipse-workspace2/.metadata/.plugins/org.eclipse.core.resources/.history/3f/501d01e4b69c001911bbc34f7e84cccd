@@ -1,0 +1,15 @@
+package qa.com.TddLibrary2;
+
+import static org.junit.Assert.assertEquals;
+
+import org.junit.Test;
+
+public class LibTest {
+	
+	private appLib lib = new appLib();
+	
+	@Test
+	public void test() {
+		assertEquals("book2", calc.bookCollection("book2"));
+
+}

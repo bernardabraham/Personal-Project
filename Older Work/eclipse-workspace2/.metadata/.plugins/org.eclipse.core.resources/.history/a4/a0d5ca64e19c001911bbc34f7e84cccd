@@ -1,0 +1,42 @@
+package qa.com.TddLibrary2;
+
+public class Book extends Item implements FrontPage {
+
+	private String title;
+	private String author;
+
+	public Book(String name, String author, int pages, double cost, boolean available, int id) {
+		super(pages, cost, available, id);
+		this.title = name;
+		this.author = author;
+
+	}
+
+	public Book(String name, String author, int pages, double cost, boolean available) {
+		super(pages, cost, available);
+		this.title = name;
+		this.author = author;
+
+	}
+
+	public String getName() {
+		return title;
+	}
+
+	public void setName(String name) {
+		this.title = name;
+	}
+
+	public String getAuthor() {
+		return author;
+	}
+
+	public void setAuthor(String author) {
+		this.author = author;
+	}
+
+	public void frontPage() {
+		System.out.println("i am a book frontpage");
+	}
+
+}

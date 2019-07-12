@@ -1,0 +1,15 @@
+package division;
+
+public class Calculator {
+	public int division(int numerator, int denominator) {
+		int output = 0;
+		try {
+			output = numerator / denominator;
+			System.out.println(output);
+		} catch (ArithmeticException iae) {
+			System.out.println(0/3);
+			return 0;
+		}
+		return output;
+	}
+}

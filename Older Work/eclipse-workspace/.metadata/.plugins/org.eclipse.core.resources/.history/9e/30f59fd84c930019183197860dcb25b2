@@ -1,0 +1,22 @@
+package com.qa.Doggo;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class DogComp {
+
+	public List<Integer> CompetitionTime(int position) {
+		List<Integer> loserList = new ArrayList();
+		for (int i = 0; i <= 100; i++) {
+			if (i == position) {
+				
+			} else if (i != position) {
+				loserList.add(i);
+				
+			}
+
+		}
+		return loserList;
+
+	}
+}

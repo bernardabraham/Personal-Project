@@ -1,0 +1,18 @@
+package qa.com.TddLibrary2;
+
+public class appLib {
+	
+	public String bookCollection(String book) {
+		
+		Arraylist<book> collection = new ArrayList();
+		
+		Book harryPotter = new Book("Harry Potter", "J.K Rowling", 223, 3.99);
+		Book lordOfTheRings = new Book("Lord Of The Rings", "J.R Tolkien",1241, 19.99);
+		Book mobyDick = new Book("Moby Dick", "Herman Melville", 378, 9.99);
+		Book greatGatsby = new Book("The Great Gatsby", "F.Scott Fitzgerald", 144, 2.50);
+		
+		return book;
+		
+	}
+
+}

@@ -1,0 +1,59 @@
+package paintWizard;
+
+public class Paint {
+	private String name;
+	private int size;
+	private int cost;
+	private int coverage;
+	private int waste;
+
+	public Paint(String name, int cost, int size, int coverage) {
+		super();
+		this.name = name;
+		this.cost = cost;
+		this.size = size;
+		this.coverage = coverage;
+
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public int getSize() {
+		return size;
+	}
+
+	public void setSize(int size) {
+		this.size = size;
+	}
+
+	public int getCost() {
+		return cost;
+	}
+
+	public void setCost(int cost) {
+		this.cost = cost;
+	}
+
+	public int getCoverage() {
+		return coverage;
+	}
+
+	public void setCoverage(int coverage) {
+		this.coverage = coverage;
+	}
+
+	public int calcWaste(int roomSize) {
+		int waste = 0;
+		
+		
+		
+		return waste;
+	}
+
+}

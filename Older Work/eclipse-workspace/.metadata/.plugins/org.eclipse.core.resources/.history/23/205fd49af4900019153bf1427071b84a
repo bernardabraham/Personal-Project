@@ -1,0 +1,9 @@
+package hello2;
+
+public class HelloWorld {
+	
+	public void firstMethod(String message) {
+		System.out.println(message);
+	}
+}
+

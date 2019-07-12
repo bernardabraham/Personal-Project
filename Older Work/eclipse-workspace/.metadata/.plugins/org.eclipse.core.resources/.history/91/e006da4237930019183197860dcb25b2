@@ -1,0 +1,26 @@
+package testing;
+import static org.juint.Assert.assertEquals;
+import org.junit.Test;
+import main.BlackJack;
+
+public class BlackJackTest {
+	
+	private BlackJack game = new BlackJack();
+ @Test
+	public void testHighestWins() {
+		assertEqual("Highest value has not won"
+				,21,this.game.play(21,16))
+		//takes two value, if theyre not
+		//equal it fails
+}
+ @Test
+	public void testBust() {
+		assertEqual("Player went over 21 but still won"
+				,21,this.game.play(21,30))
+}
+ @Test
+	public void testBothBust() {
+		assertEqual("Both players went bust but 0 was not returned"
+				,0,this.game.play(30,30))
+	}
+}

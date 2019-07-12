@@ -1,0 +1,60 @@
+package qa.com.TddLibrary2;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class Library {
+	private int count = 0;
+	private List<Item> items = new ArrayList<>();
+	private List<Person> people = new ArrayList<>();
+
+	
+	public boolean checkOut(Item item) {
+		// set checked status to out
+		item.setAvailable(false);
+		return item.getAvailable();
+
+	}
+
+	public boolean checkIn(Item item) {
+		// set checked status to out
+		item.setAvailable(true);
+		return item.getAvailable();
+	}
+
+	public boolean addItem(Item item) {
+		item.setID(++this.count);
+		return items.add(item);
+	}
+
+	public boolean removeItem(Item item) {
+		return items.remove(item);
+	}
+
+	public double updateItem(int id, double cost) {
+		Item updated = null;
+		for (Item item : this.items) {
+			if (item.getId() == id) {
+				updated = item;
+			}
+		}
+		if (updated == null) {
+			throw new ItemNotFoundException();
+		}
+		updated.setCost(cost);
+		return updated.getCost();
+
+	}
+
+	public boolean registerPerson(Person person) {
+		return people.add(person);
+	}
+
+	public boolean deletePerson(Person person) {
+		return people.remove(person);
+	}
+
+	public void updatePerson() {
+
+	}
+}

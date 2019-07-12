@@ -1,0 +1,14 @@
+package Animal;
+
+import animal.Mammal;
+
+public class Mammal extends Animal {
+	
+
+		public void bark() {
+			System.out.println("woof");
+		}
+
+		
+
+}

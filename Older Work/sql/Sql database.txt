@@ -1,0 +1,47 @@
+select * from name;
+
+-- customer data
+insert into customer (fname, lname, address, city, email) values ("Steve", "Bills", "123 Fake St.", "Manchester", "stevebills12@mail.com");
+insert into customer (fname, lname, address, city, email) values ("Bill", "Steves", "32 New Rd.", "Manchester", "billsteves145@gmail.com");
+insert into customer (fname, lname, address, city, email) values ("Beve", "Stills", "4 Another Ave.", "Birmingham", "bevestills946@gmail.com");
+insert into customer (fname, lname, address, city, email) values ("Amy", "Young", "55 Lookman Place", "Preston", "amy.young94@hotmail.co.uk");
+insert into customer (fname, lname, address, city, email) values ("Rachel", "Punter", "9 Other Rd.", "Burnley", "rpunterpersonal@outlook.com");
+insert into customer (fname, lname, address, city, email) values ("Alex", "Kaini", "125 Fireplace Ave.", "Accrington", "alexkaini@alexkaini.com");
+insert into customer (fname, lname, address, city, email) values ("Guy", "Powell", "89 Station Ave.", "Oswaldtwistle", "guypowel455@gmail.com");
+insert into customer (fname, lname, address, city, email) values ("Felix", "Wadilon", "46 Grasslook St.", "Preston", "wadilonlix@hotmail.com");
+insert into customer (fname, lname, address, city, email) values ("Jacob", "Chainock", "21 Bar Way", "Bolton", "chainocky@gmail.com");
+insert into customer (fname, lname, address, city, email) values ("Michael", "Crook", "100 Cent Ave.", "Blackburn", "mcrook91124@bt.com");
+
+-- staff data
+insert into staff (fname, lname, role, email) values ("Ray", "Smithy", "Salesman", "ray.smithy@nbgardens.net");
+insert into staff (fname, lname, role, email) values ("Luke", "Iverson", "Salesman", "luke.iverson@nbgardens.net");
+insert into staff (fname, lname, role, email) values ("Steve", "Foulds", "Salesman", "steven.foulds@nbgardens.net");
+insert into staff (fname, lname, role, email) values ("Alana", "Magnet", "Salesman", "alana.magnet@nbgardens.net");
+insert into staff (fname, lname, role, email) values ("Ben", "Bristols", "Salesman", "benjamin.bristols@nbgardens.net");
+insert into staff (fname, lname, role, email) values ("Jasmine", "Kidd", "Salesman", "jasmine.kiddlawson@nbgardens.net");
+insert into staff (fname, lname, role, email) values ("Lucy", "Oswald", "Salesman", "lucy.oswald@nbgardens.net");
+insert into staff (fname, lname, role, email) values ("Umara", "Lockheed", "Salesman", "umara.lockheed@nbgardens.net");
+insert into staff (fname, lname, role, email) values ("Rav", "Rajesh", "Salesman", "ravi.rajeshpunam@nbgardens.net");
+insert into staff (fname, lname, role, email) values ("Chi", "Nam", "Salesman", "chi.zhunam@nbgardens.net");
+
+-- supplier data
+insert into supplier (name, location) values ("Gnome on the Water", "Manchester");
+insert into supplier (name, location) values ("Go hard or go Gnome", "Bristol");
+insert into supplier (name, location) values ("Country gnomes take me home", "Preston");
+insert into supplier (name, location) values ("Gnome way I'm living without you", "Bolton");
+insert into supplier (name, location) values ("Gnome your own way", "Liverpool");
+insert into supplier (name, location) values ("Gnomething's gonna stop us now", "Blackburn");
+insert into supplier (name, location) values ("Gnome diggity", "Leeds");
+insert into supplier (name, location) values ("Gnome to me", "York");
+
+-- product data
+insert into product (name, stock_level, price) values ("Gnomei Malone", 24, 19.99);
+insert into product (name, stock_level, price) values ("Post Malgnome", 48, 29.99);
+insert into product (name, stock_level, price) values ("Gnome Gallagher", 22, 31.99);
+insert into product (name, stock_level, price) values ("Sylvester Stalgnome", 14, 24.99);
+insert into product (name, stock_level, price) values ("Gnome Chomsky", 31, 27.99);
+insert into product (name, stock_level, price) values ("Gnome Fielding", 49, 18.99);
+insert into product (name, stock_level, price) values ("The Ragnomes", 49, 11.99);
+insert into product (name, stock_level, price) values ("Nagnomei Campbell", 11, 18.99);
+insert into product (name, stock_level, price) values ("Gnomea the Vampire", 8, 29.99);
+insert into product (name, stock_level, price) values ("Jacuzzi", 12, 119.99);

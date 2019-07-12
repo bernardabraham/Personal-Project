@@ -1,0 +1,16 @@
+package hello2;
+
+public class MathClass { // creates a new class
+	
+
+	public int addNumber(int a, int b) { // creates a method signature
+		return a + b; // method body
+	}
+	
+	public int multiplyNumber(int a, int b) { // creates a method signature
+		return a * b; 
+	}
+	public int divideNumber(int a, int b) { // creates a method signature
+		return a / b; 
+	}
+}

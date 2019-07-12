@@ -1,0 +1,28 @@
+package classExercises;
+
+public class PaintWizard {
+
+	public void addName(String name) {
+		this.job = job;
+		System.out.println("name");
+	}
+}
+
+size of room=
+a meters => 100m
+price =
+b £ => £20
+litres per tin=c=>21litres
+
+smallest waste=c-(a%c)
+
+cheapest if a%c!=0 int(a/c+1)*b
+
+else int(a/c)*b
+
+// 1. Create a paint requirement wizard that will calculate
+// which of the following three products, would be the cheapest to buy,
+// for the room you are painting.
+//
+// a. Work out which one wastes the least.
+// b. Work out which is the best choice for any room (Cheapest).

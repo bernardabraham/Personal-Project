@@ -1,0 +1,28 @@
+package qa.com.TddLibrary2;
+
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class appLib {
+	
+	public String bookCollection(String book) {
+		
+		List<Book> bookCollection = new ArrayList<Book>();
+		//List<Book> collection Arrays.asList(harryPotter, lordOfTheRings, 
+		//mobyDick, greatGatsby);
+		
+		Book harryPotter = new Book("Harry Potter", "J.K Rowling", 223, 3.99);
+		Book lordOfTheRings = new Book("Lord Of The Rings", "J.R Tolkien",1241, 19.99);
+		Book mobyDick = new Book("Moby Dick", "Herman Melville", 378, 9.99);
+		Book greatGatsby = new Book("The Great Gatsby", "F.Scott Fitzgerald", 144, 2.50);
+		
+		bookCollection.add(harryPotter);
+		bookCollection.add(lordOfTheRings);
+		bookCollection.add(mobyDick);
+		System.out.println(bookCollection);
+		return book;
+		
+	}
+
+}

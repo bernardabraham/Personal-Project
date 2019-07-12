@@ -1,0 +1,62 @@
+package paintWizard;
+
+public class PaintWizardLogic {
+	public static void main(String[] args) {
+
+		int a = 100; // room size
+		int b = 500; // price
+		int c = 10; // size of tin
+
+		int roomSize = 100; // room size
+		int cost = 5; // price
+		int z = 26; // size of tin
+
+		int leastWaste1 = 0;
+		int leastWaste2 = 0;
+
+		if (a % c != 0) {
+			leastWaste1 = c - (a % c);
+		}
+
+		if (roomSize % z != 0) {
+			leastWaste2 = z - (roomSize % z);
+		}
+
+		//System.out.println(leastWaste1);
+		//System.out.println(leastWaste2);
+
+		if ((leastWaste1 == Math.min(leastWaste1, leastWaste2))) {
+			System.out.println("Option one has least waste");
+		} else {
+			System.out.println("Option two has least waste");
+		}
+		int cheapest1 = 0;
+		int cheapest2 = 0;
+
+		if (a % c != 0) {
+			cheapest1 = ((a / c) + 1) * b;
+
+			System.out.println(cheapest1);
+		} else {
+			cheapest1 = (a / c) * b;
+
+			System.out.println(cheapest1);
+		}
+		if (roomSize % z != 0) {
+			cheapest2 = ((roomSize / z) + 1) * cost;
+
+			System.out.println(Math.max(cheapest1, cheapest2));
+		} else {
+			cheapest2 = (roomSize / z) * cost;
+
+			System.out.println(Math.max(cheapest1, cheapest2));
+		}
+
+		if (cheapest1 == (Math.min(cheapest1, cheapest2))) {
+			System.out.println("Option one is cheapest");
+		} else {
+			System.out.println("Option two is cheapest");
+		}
+	}
+
+}

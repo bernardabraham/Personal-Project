@@ -1,0 +1,46 @@
+package com.qa.Doggo;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class DogComp {
+
+	public List<String> CompetitionTime(int position) {
+		List<String> loserString = new ArrayList<String>();
+		for (int i = 1; i <= 100; i++) {
+			if (i == position) {
+
+			} else if (i != position && i>=4 && i<=20) {
+				loserString.add(i + "th");
+			}else {
+				int d1 = i % 10;
+				switch (d1) {
+				case 1:
+					if (d1 == 1) {
+						loserString.add(i + "st");
+					}
+					break;
+				case 2:
+					if (d1 == 2) {
+						loserString.add(i + "nd");
+					}
+					break;
+				case 3:
+					if (d1 == 3) {
+						loserString.add(i + "rd");
+					}
+					break;
+				default:
+
+					loserString.add(i + "th");
+
+					break;
+				}
+
+			}
+		}
+		System.out.println(loserString);
+		return loserString;
+
+	}
+}

@@ -1,0 +1,103 @@
+create database if not exists sampledata;
+use sampledata;
+
+CREATE TABLE Customer(
+     Customer_ID INT NOT NULL AUTO_INCREMENT,
+     first_name VARCHAR (20) NOT NULL,
+	 last_name VARCHAR (20) NOT NULL,
+     address VARCHAR (20) NOT NULL,
+	 city VARCHAR (20) NOT NULL,
+     email VARCHAR (200) NOT NULL,
+     PRIMARY KEY (Customer_ID)
+);
+
+     CREATE TABLE Staff(
+     Staff_ID INT NOT NULL AUTO_INCREMENT,
+	 first_name VARCHAR (20) NOT NULL,
+	 last_name VARCHAR (20) NOT NULL,
+	 role VARCHAR (20) NOT NULL,
+	 email VARCHAR (200) NOT NULL,
+	 PRIMARY KEY (Staff_ID)
+     
+);
+
+CREATE TABLE Product(
+    Product_ID INT AUTO_INCREMENT NOT NULL,
+    product_name VARCHAR (20) NOT NULL,
+	stock double NOT NULL,
+	price int (20) NOT NULL,
+    PRIMARY KEY (Product_ID)
+);
+
+CREATE TABLE Supplies(
+	 supplies_ID INT AUTO_INCREMENT NOT NULL,
+     supplier_name VARCHAR (200) NOT NULL,
+	 location VARCHAR (200) NOT NULL,
+	 PRIMARY KEY (Supplies_ID)
+     
+);
+
+
+CREATE TABLE Orderline(
+     product_ID INT NOT NULL,
+     customer_ID INT NOT NULL,
+     FOREIGN KEY (customer_ID) REFERENCES Customer(customer_ID),
+     FOREIGN KEY (Product_ID) REFERENCES Product (Product_ID)
+);
+
+
+FOREIGN KEY (Product_ID) REFERENCES Product (Product_ID)
+
+UPDATE customer SET first_name="Steve", last_name='Bills', address="", city="Manchester", email="stevebills12@gmail.com" WHERE customer_ID="1";
+
+INSERT INTO Customer (first_name,last_name,address,city,email) VALUES('Steve','Bills','123fakest','manchester','stevebills12@gmail');
+
+INSERT INTO Staff (first_name,last_name,role,email) VALUES(
+'Ray','Smithy','salesman','ray.smithy@nbgardens.net');
+
+INSERT INTO Product (product_name,stock,price) VALUES(
+'Gnomei Malone','24','19.99');
+
+INSERT INTO Supplies (supplier_name, location) VALUES(
+'SteveGnome on the Water','Manchester');
+
+select * from customer WHERE age>25;
+select * from customer WHERE city = "liverpool" or city = "birmingham";
+select * from customer WHERE last_name like "s%";select * from customer WHERE city in (“Birmingham”, “liverpool”);
+
+staff, customers, supplier, product  
+ 
+1) select product in Supplies 
+select * from product  
+2) register a customer details
+select * from customer
+
+3) create an order and add products
+new order table referencing product id, customer id
+
+4) update order status using orderID
+new order status table referencing order id 
+
+ammend status onto order table 
+update status where stock<50 
+
+5) update stock count at threshhold
+ update stock when threshold=30
+
+6) see all suppliers to order products on low stock 
+create stock, product table 
+
+7) create order history 
+
+select order_ID, where customerID=""
+
+CREATE VIEW viewname(productname,stock,result) AS SELECT col1,col2(col3/col4*100)AS result FROM tablename;
+DROP VIEW viewname;
+SELECT * FROM viewname;
+
+use sakili 
+
+CREATE VIEW lowstock(product_name,stock_count,totalprice) AS 
+SELECT product_name,stock_count(Price*stock)AS totalprice FROM product;
+
+SELECT * FROM viewname;

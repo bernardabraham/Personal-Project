@@ -1,0 +1,17 @@
+package hello2;
+
+public class App {
+	public static void main(String[] args) {
+		String output = "first question output";
+		//System.out.println(output);
+		FirstClass hw = new FirstClass();
+		hw.firstMethod(output);
+		System.out.println(hw.getMessage());
+		
+		
+		//MathClass hw = new MathClass();
+		//hw.mathMethod(output);
+		//System.out.println(hw.getMessage());
+	}
+	
+}

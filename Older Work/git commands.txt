@@ -1,0 +1,21 @@
+git clone https://github.com/bernardabraham/First-Repo.git
+git add .
+git commit -m "hey"
+git push
+
+https://github.com/bernardabraham/First-Repo.git
+
+ls 
+
+ls -a
+
+https://gitlab.com/ianowenqa
+
+branching
+git branch <name>
+git checkout<>
+
+switch to branch 'master'
+git merge <name>
+
+https://wireframe.cc/pro/edit/259519

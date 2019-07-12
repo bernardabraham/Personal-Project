@@ -1,0 +1,25 @@
+package hello2;
+
+public class Results {
+
+	public String printResult(int a, int b, int c) { // creates a method signature
+		if (a < 150 & b < 150 & c < 150) {
+			return "your mark is " + a + "\nyour mark is " + b + "\nyour mark is " + c;
+		} else {
+			return "Mark entered incorrectly";
+		}
+	}
+	// displays results
+
+/*	public int printResult(int a, int b, int c) {
+
+		if (a < 150 & b < 150 & c < 150)
+			;
+
+		return (a + b + c) * 100 / 450;
+	}else system.out.print"Mark entered incorrectly";
+	// displays average percentage
+
+}*/
+
+}

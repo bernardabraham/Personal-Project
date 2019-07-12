@@ -1,0 +1,24 @@
+package com.qa.Doggo;
+
+import static org.junit.Assert.*;
+
+import org.junit.Before;
+import org.junit.Test;
+
+import junit.framework.TestCase;
+
+public class DoggoTest {
+
+	private DogComp dogComp;
+
+	@Before
+	public void init() {
+		this.dogComp = new DogComp();
+	}
+
+	@Test
+	public void DoggoTest1() {
+		assertEquals("These dogs are losers", true, this.dogComp.CompetitionTime(4));
+	}
+
+}

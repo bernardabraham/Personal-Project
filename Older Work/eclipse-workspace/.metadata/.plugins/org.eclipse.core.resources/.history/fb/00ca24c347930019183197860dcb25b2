@@ -1,0 +1,9 @@
+package com.qa.Doggo;
+
+public class DogComp {
+	public int CompetitionTime(int Position) {
+
+		return Position;
+
+	}
+}

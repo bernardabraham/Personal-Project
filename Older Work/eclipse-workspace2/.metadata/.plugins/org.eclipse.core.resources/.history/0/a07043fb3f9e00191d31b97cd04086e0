@@ -1,0 +1,47 @@
+package qa.com.Hospital;
+
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
+
+import org.junit.Before;
+import org.junit.Test;
+
+import qa.com.TddLibrary2.Book;
+import qa.com.TddLibrary2.Item;
+import qa.com.TddLibrary2.Library;
+
+/**
+ * Unit test for simple App.
+ */
+public class AppTest {
+	private Hospital hos;
+	ConsultantDoctor drDoolittle = new ConsultantDoctor("dr.doolittle", "surgeon", 50, 4);
+	
+	@Before
+	public void init() {
+		this.hos = new Hospital();
+	}
+    
+    @Test
+	public void testReturnDoctors() {
+		assertTrue(true, hos.returnDoctors());
+	}
+	@Test
+	public void testReturnPatients() {
+		assertTrue(this.hos.addItem());
+	}
+	@Test
+	public void testReturnTeams() {
+		assertTrue(this.hos.addItem(new Book("Harry Potter", "J.K Rowling", 223, 3.99, false)));
+	}
+	@Test
+	public void testGradeCheck() {
+		assertEquals("success", true, this.hos.gradeCheck(grade);
+	}
+	@Test
+	public void TestConsultantTeamCheck() {
+		assertTrue(this.hos.addItem(new Book("Harry Potter", "J.K Rowling", 223, 3.99, false)));
+	}
+	
+	
+}

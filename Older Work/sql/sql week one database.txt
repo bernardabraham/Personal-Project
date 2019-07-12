@@ -1,0 +1,38 @@
+create database if not exists NBgardens;
+use NBgardens;
+
+drop table if exists Customer_Order;
+drop table if exists Customer;
+
+
+CREATE TABLE Customer(
+     Customer_ID INT NOT NULL AUTO_INCREMENT,
+     name VARCHAR (20) NOT NULL,
+     address VARCHAR (20) NOT NULL,
+     email VARCHAR (20) NOT NULL,
+     password VARCHAR (20) NOT NULL,
+     PRIMARY KEY (Customer_ID)
+);
+
+     CREATE TABLE Customer_Order(
+     Order_ID INT (10) NOT NULL,
+     Customer_ID INT NOT NULL,
+     Date_placed date NOT NULL,
+     FOREIGN KEY (Customer_ID) REFERENCES Customer (Customer_ID),
+     PRIMARY KEY (Order_ID)
+);
+
+CREATE TABLE Product(
+     Product_ID INT (10) NOT NULL,
+     Product_Name VARCHAR (10) NOT NULL,
+     Stock_Count INT (10) NOT NULL,
+     Price DOUBLE NOT NULL,
+     PRIMARY KEY (Product_ID)
+);
+CREATE TABLE Orderline(
+     Order_ID INT NOT NULL,
+     Product_ID INT NOT NULL,
+     Quantity_ordered INT (10) NOT NULL,
+     FOREIGN KEY (Order_ID) REFERENCES Customer_Order (Order_ID),
+     FOREIGN KEY (Product_ID) REFERENCES Product (Product_ID)
+);

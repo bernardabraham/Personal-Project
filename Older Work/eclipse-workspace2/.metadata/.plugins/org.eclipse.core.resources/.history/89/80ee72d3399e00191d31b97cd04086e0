@@ -1,0 +1,10 @@
+package qa.com.Hospital;
+
+import java.util.List;
+
+public class Hospital {
+
+	List<Patient> patients = new Arraylist<>();
+	
+	
+}

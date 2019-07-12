@@ -1,0 +1,11 @@
+package bloop;
+
+import org.junit.Test;
+
+public class DivisionTest {
+	@Test
+	public void test() {
+
+	}
+
+}

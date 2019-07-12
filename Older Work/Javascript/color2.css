@@ -1,0 +1,40 @@
+
+body{
+    background-color: cadetblue;
+    color: black;
+    letter-spacing: 3px;
+    line-height: 3;
+
+    font-family: 'Times New Roman', Times, serif;
+
+    }
+
+#enterText{
+letter-spacing: 45px;
+font-size: 70px;
+font-style: italic;
+    }
+
+    .handleSubmit{
+letter-spacing: 45px;
+font-size: 80px;
+font-style: bold;
+    }
+
+    .successClass{
+        color: white;
+    }
+    #usernameId{
+        font-size: 20px;
+    }
+
+#unameDiv{
+
+    border: 3px solid black;
+    width: 50%;
+    padding-left: 50px;
+    }
+
+#heading{
+    color: white;
+}

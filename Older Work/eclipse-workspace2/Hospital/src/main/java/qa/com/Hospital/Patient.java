@@ -1,0 +1,60 @@
+package qa.com.Hospital;
+
+public class Patient {
+
+	private String name;
+	private String address;
+	private int age;
+	private String treatment;
+	private String insurance;
+
+	public Patient(String name, String address, int age, String treatment, String insurance) {
+		super();
+		this.name = name;
+		this.address = address;
+		this.age = age;
+		this.treatment = treatment;
+		this.insurance = insurance;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public String getAddress() {
+		return address;
+	}
+
+	public void setAddress(String address) {
+		this.address = address;
+	}
+
+	public int getAge() {
+		return age;
+	}
+
+	public void setAge(int age) {
+		this.age = age;
+	}
+
+	public String getTreatment() {
+		return treatment;
+	}
+
+	public void setTreatment(String treatment) {
+		this.treatment = treatment;
+	}
+
+	public String getInsurance() {
+		return insurance;
+	}
+
+	public void setInsurance(String insurance) {
+		this.insurance = insurance;
+	}
+
+}

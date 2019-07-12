@@ -1,0 +1,50 @@
+package garage;
+
+public class asdfsd {
+	public static void main(String[] args) {
+
+		int a = 100; // room size
+		int b = 5; // price
+		int c = 30; // size of tin
+		int x = 100; // room size
+		int y = 500; // price
+		int z = 20; // size of tin
+
+		int leastWaste1 = c - (a % c);
+		int leastWaste2 = z - (x % z);
+		
+		if  ((leastWaste1 == Math.min(leastWaste1, leastWaste2))){
+			System.out.println("Option one is cheapest");
+			}else{
+				System.out.println("Option two is cheapest");
+		int cheapest1 = Integer.MAX_VALUE;
+		int cheapest2 = Integer.MAX_VALUE;
+
+		if (a % c != 0) {
+			cheapest1 = ((a / c) + 1) * b;
+
+			// System.out.println(cheapest1);
+		} else {
+			cheapest1 = (a / c) * b;
+
+			// System.out.println(cheapest1);
+		}
+		if (x % z != 0) {
+			cheapest2 = ((x / z) + 1) * y;
+
+			// System.out.println(Math.max(cheapest1,cheapest2));
+		} else {
+			cheapest2 = (x / z) * y;
+
+			// System.out.println(Math.max(cheapest1,cheapest2));
+		}
+		if  (cheapest1 == (Math.min(cheapest1, cheapest2))){
+		System.out.println("Option one is cheapest");
+		}else{
+			System.out.println("Option two is cheapest");
+		}
+		
+	}
+
+}
+}

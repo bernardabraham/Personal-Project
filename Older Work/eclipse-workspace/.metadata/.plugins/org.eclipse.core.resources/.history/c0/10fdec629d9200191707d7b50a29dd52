@@ -1,0 +1,19 @@
+package paintWizard;
+
+import person.Person;
+
+public class PaintWizardApp {
+
+	public static void main(String[] args) {
+		Person Dave = new Person();
+		Dave.setname("Dave");
+		Dave.setage(45);
+	}
+}
+
+// 1. Create a paint requirement wizard that will calculate
+// which of the following three products, would be the cheapest to buy,
+// for the room you are painting.
+//
+// a. Work out which one wastes the least.
+// b. Work out which is the best choice for any room (Cheapest).

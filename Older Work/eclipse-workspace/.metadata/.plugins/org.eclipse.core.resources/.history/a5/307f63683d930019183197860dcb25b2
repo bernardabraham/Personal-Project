@@ -1,0 +1,20 @@
+package test2;
+
+public class Factorial {
+
+	public int factorial(int x) {
+		int factorial;
+
+		for (int i = 2; x % i == 0; i++) {
+
+			if (factorial == 1) {
+				break;
+			}
+
+			factorial = x / i;
+		}
+
+		return factorial;
+	}
+
+}

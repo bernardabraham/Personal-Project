@@ -1,0 +1,51 @@
+package qa.com.Hospital;
+
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
+
+import org.junit.Before;
+import org.junit.Test;
+
+
+
+public class AppTest {
+	private Hospital hos;
+	Doctor drDoolittle = new Doctor("dr.doolittle", "surgeon", "", 50, 2);
+	
+	
+	@Before
+	public void init() {
+		this.hos = new Hospital();
+	}
+	  @Test
+		public void testAddDoctor() {
+		assertTrue(this.hos.addDoctor(drDoolittle));
+		assertTrue(this.hos.addDoctor(drDoolittle));
+		assertTrue(this.hos.addDoctor(drDoolittle));
+		System.out.println(hos.returnDoctors());
+	  }
+    
+    @Test
+	public void testReturnDoctors() {
+    	assertEquals(3, this.hos.returnDoctors().size());
+    }
+    
+	@Test
+	public void testReturnPatients() {
+		assertEquals(3, this.hos.returnPatients().size());
+	}
+//	@Test
+//	public void testReturnTeams() {
+//		assertTrue(this.hos.addItem(new Book("Harry Potter", "J.K Rowling", 223, 3.99, false)));
+//	}
+//	@Test
+//	public void testGradeCheck() {
+//		assertEquals("success", true, this.hos.gradeCheck(grade);
+//	}
+//	@Test
+//	public void TestConsultantTeamCheck() {
+//		assertTrue(this.hos.addItem(new Book("Harry Potter", "J.K Rowling", 223, 3.99, false)));
+//	}
+}
+	
+

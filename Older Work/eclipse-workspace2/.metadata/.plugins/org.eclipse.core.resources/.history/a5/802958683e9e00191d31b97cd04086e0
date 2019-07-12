@@ -1,0 +1,31 @@
+package qa.com.Hospital;
+
+public class ConsultantDoctor extends Doctors {
+	
+		// TODO Auto-generated constructor stub
+	}
+
+	private int grade;
+
+	public ConsultantDoctor(String name, String role, int age, int grade) {
+		super(name, role, age);
+		this.grade = grade;
+	}
+
+	public int getGrade() {
+		return grade;
+	}
+
+	public void setGrade(int grade) {
+		if (grade>3) {
+		
+		this.grade = grade;
+		}
+	}
+	
+	
+	}
+
+
+
+	

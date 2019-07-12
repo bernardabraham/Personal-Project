@@ -1,0 +1,15 @@
+package Animal;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class FourInARow {
+	
+	public void setBoard () {
+		
+		int[][] board = new int[7][6];
+		
+		System.out.println(board);
+	}
+
+}

@@ -1,0 +1,25 @@
+package hello2;
+
+public class FirstClass {
+	
+	private String message = "second question output";
+
+	public void firstMethod(String message) {
+		System.out.println(message);
+	}
+	
+	public String getMessage() {
+		return message;
+	}
+	
+
+}
+
+public class MathClass {
+	
+	private int a=5, b=4;
+	
+	public void mathMethod(int a b) {
+	
+	}
+}

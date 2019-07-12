@@ -1,0 +1,33 @@
+package qa.com.Hospital;
+
+import java.util.List;
+
+public class Hospital {
+
+	List<Patient> patientList = new Arraylist<>();
+	List<Doctors> doctorList = new Arraylist<>();
+
+	
+	public boolean returnDoctors() {
+		
+		 return doctorList.get();
+		//print list of doctors
+	}
+
+	public void returnPatients() {
+		//print lsit of patients
+	}
+
+	public void returnTeams() {
+		//print list of teams
+	}
+
+	public void gradeCheck() {
+			//check grade is over 3
+	}
+
+	public void consultantTeamCheck() {
+			//check there's a consultant in the team
+	}
+
+}

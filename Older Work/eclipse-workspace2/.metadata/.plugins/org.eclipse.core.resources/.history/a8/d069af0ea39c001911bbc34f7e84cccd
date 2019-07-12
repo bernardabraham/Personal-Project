@@ -1,0 +1,20 @@
+package division;
+
+public class App {
+	public static void main(String[] args) {
+		
+	
+		public static void division(int numerator int denominator) {
+			try {
+			int output = numerator/denominator;
+		}
+			catch(exception IllegalArgumentException){
+				denominator == 0;
+			}
+			if (divisor == 0) {
+			    throw new IllegalArgumentException("Argument 'divisor' is 0");
+			return output;
+		}
+	}
+}
+}

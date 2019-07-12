@@ -1,0 +1,10 @@
+ body{
+    background-image: url("calculator-1470.jpg");
+    color: white;
+    letter-spacing: 3px;
+    line-height: 3;
+    text-shadow: 3px 2px red;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-style: oblique
+    }
+    

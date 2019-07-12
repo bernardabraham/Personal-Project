@@ -1,0 +1,14 @@
+package bloop;
+
+import static org.junit.Assert.assertEquals;
+
+import org.junit.Test;
+
+public class DivisionTest {
+	@Test
+	public void test() {
+		assertEquals(2, oe.division(6, 3));
+
+	}
+
+}

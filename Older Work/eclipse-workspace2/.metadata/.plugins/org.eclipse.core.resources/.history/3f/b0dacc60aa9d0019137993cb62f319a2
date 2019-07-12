@@ -1,0 +1,34 @@
+package Animal;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+
+public class FourInARow {
+	
+	public String[][] setBoard () {
+		
+		String[][] board = new String[7][6];
+		
+		return board;
+		  
+	}
+	
+	public void setPoint(String player, String col) {
+		
+		
+		
+	}
+	
+	input = A
+		if(input = A)
+			for(i:array) {
+				if array[i][1] = null;
+				set.array[i][1] = "red";
+		if(input = B)
+			for(i:array) {
+				if array[i][2] = null;
+				set.array[i][2] = "red";
+			}
+
+}

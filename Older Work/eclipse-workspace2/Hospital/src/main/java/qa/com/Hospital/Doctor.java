@@ -1,0 +1,66 @@
+package qa.com.Hospital;
+
+public class Doctor {
+
+	private String name;
+	private String role;
+	private String seniority;
+	private int age;
+	private int grade;
+
+	public Doctor(String name, String role, String seniority, int age, int grade) {
+		super();
+		this.name = name;
+		this.role = role;
+		this.seniority = seniority;
+		this.age = age;
+		this.grade = grade;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public String getRole() {
+		return role;
+	}
+
+	public void setRole(String role) {
+		this.role = role;
+	}
+
+	public int getAge() {
+		return age;
+	}
+
+	public void setAge(int age) {
+		this.age = age;
+	}
+
+	public int getGrade() {
+		return grade;
+	}
+
+	@Override
+	public String toString() {
+		return "Doctor [name=" + name + ", role=" + role + ", seniority=" + seniority + ", age=" + age + ", grade="
+				+ grade + "]";
+	}
+
+	public void setGrade(int grade) {
+		this.grade = grade;
+	}
+
+	public String getSeniority() {
+		return seniority;
+	}
+
+	public void setSeniority(String seniority) {
+		this.seniority = seniority;
+	}
+
+}

@@ -1,0 +1,10 @@
+package hello2;
+
+
+
+public class MathClass {
+	
+	public int getnumber(int a, int b) {
+		return a * b;
+	}
+}

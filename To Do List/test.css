@@ -51,7 +51,26 @@ progress::-webkit-progress-value{
     background-color:#888;
 }
 
+#submit2{
+  position:relative;
+  top: 600px;
 
+}
+
+#deleteButton{
+  background-color: #444;
+  border: none;
+  color: white;
+  padding: 5px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+}
+#deleteButton:hover{
+  background-color:#888;
+}
 #tickbox{
     height: 20px;
     width: 20px;

@@ -1,0 +1,51 @@
+package qa.com.TddLibrary2;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class Library {
+	private int count = 0;
+	private List<Item> collection = new ArrayList<>();
+
+	public String checkOut(Item item) {
+		// set checked status to out
+		item.setStatus("Out");
+		return item.getStatus();
+
+	}
+
+	public String checkIn(Item item) {
+		// set checked status to out
+		item.setStatus("In");
+		return item.getStatus();
+	}
+
+	public boolean addItem(Item item) {
+		item.setID(this.count++);
+		return collection.add(item);
+	}
+
+	public boolean removeItem(Item item) {
+		return collection.remove(item);
+	}
+
+	public void updateItem(Item item) {
+	for (int i=0, i<id.MAXVALUE, i++) {
+			if (item.id == i) {
+				item.setCost(0.99);
+			}
+		}		
+	}
+
+	public void registerPerson() {
+
+	}
+
+	public void deletePerson() {
+
+	}
+
+	public void updatePerson() {
+
+	}
+}

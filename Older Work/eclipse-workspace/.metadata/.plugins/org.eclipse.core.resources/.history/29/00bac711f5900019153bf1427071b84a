@@ -1,0 +1,11 @@
+package hello2;
+
+public class App {
+	public static void main(String[] args) {
+		String output = "hello world";
+		//System.out.println(output);
+		HelloWorld hw = new HelloWorld();
+		hw.firstMethod(output);
+	}
+	
+}
