@@ -34,14 +34,14 @@ function strikeThrough() {
 }
 
 function goToSettings(method, url, username) {
-    window.location = 'ToDoSettings.html';
+    window.location = 'Login/Settings.html';
 }
-function goToRegisterPage(method, url, username) {
-    window.location = 'ToDoRegister.html';
+function goToRegister(method, url, username) {
+    window.location = 'Login/Register.html';
 }
 function goToLogin(method, url, username) {
-    window.location = 'ToDoLogin.html';
+    window.location = 'Login/Login.html';
 }
-function goToHome(method, url, username) {
-    window.location = 'ToDoMain.html';
+function goToMain(method, url, username) {
+    window.location = 'Main.html';
 }

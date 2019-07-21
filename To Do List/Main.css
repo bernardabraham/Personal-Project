@@ -5,7 +5,7 @@
    margin: 1rem auto;
 
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
 
 }
 
@@ -13,6 +13,11 @@
     border: 3px solid black;
     grid-column: 2/6;
     
+}
+
+.user-webkit-transform{
+  position: relative
+  translateX(100px);
 }
 
 progress::-webkit-progress-value{

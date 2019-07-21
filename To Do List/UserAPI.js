@@ -21,6 +21,7 @@ makeRequest('POST', 'localhost:8080/ProjectAPI/api/account/create', userData)
     });
    
 }
+
 function login(username, password) {
 
 const username = document.getElementById("username")
