@@ -1,0 +1,88 @@
+<html>
+    <link href="Main.css" rel="stylesheet" type="text/css"></link>
+    
+
+<body>
+
+<div class = "wrapper">
+
+
+<div  id= "sidebar">  side div
+
+        <!-- <p id= "searchHeader" for="search">Task 1
+            search</p>
+        <input id= "searchHeader" type="search"> -->
+
+        <p for="search">Task 1
+            search</p>
+        <input id= "searchbar" type="search" onkeypress="return runScript3(event)">
+        <button class="button" id="submit3" onclick = "return panelSearch()">Search</button> 
+
+     
+
+
+</div>
+
+
+<div id= "parent1">parent div
+
+<p for="task2" id="taskAdd">Project name</p>
+<input id="taskName" type="text" onkeypress="return runScript2(event)"/>
+
+  
+
+<p for="task1">Add a new Task...</p>
+<input id="task1" type="text" onkeypress="return runScript(event)"/>
+<button class="button" id="submit1" onclick = "return addTask()" >Submit</button>
+
+
+
+
+
+<button class="button" id="submit2" onclick = "return addProject()" >Add Project</button>
+<br>
+<label id = "progress1"> </label>
+<progress id = "progressBar" value="0" max="100"> </progress> 
+<!-- <div id = >
+        id = "progressBar" value="0"
+<div id = >
+
+</div>
+</div> -->
+
+
+
+</div>
+
+
+
+
+
+</div>
+
+<!--this allows search bar to stay at the top
+class ="sticky-header-container" -->
+
+
+            
+              
+                   
+
+                    <script src="MiscFunctions.js"></script> 
+                    <script src="SearchAddDelete.js"></script> 
+                    <script src="UserAPI.js"></script> 
+
+
+</body>
+
+</html>
+
+<!-- 
+Q) When task is completed does it vanish or get 'striked through'?    
+Q) Account details: Username, password, email, name
+Additional Functionality: Searchbar, due date, add image, 
+progress bar, scroll bar on the left side panel, ability to delete tasks)
+
+<input type="time" id="appt" name="appt"
+       min="9:00" max="18:00" required>
+-->
