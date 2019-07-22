@@ -1,7 +1,6 @@
 1) API to add, delete, update, view users
-2) Login/register pages added
-3) Database relationship
 4) Add project, request project functions
+3) Database relationship
 5) CSS color, theme, layout, buttons
 6)
 7)

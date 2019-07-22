@@ -24,11 +24,11 @@ makeRequest('POST', 'localhost:8080/ProjectAPI/api/account/create', userData)
 
 function login(username, password) {
 
-const username = document.getElementById("username")
-const password = document.getElementById("password")
+// const username = document.getElementById("username")
+// const password = document.getElementById("password")
  
 
-makeRequest('GET', 'localhost:8080/ProjectAPI/api/account/get'+ username +'&password='+ password)
+makeRequest('GET', 'localhost:8080/ProjectAPI/api/account/getUser/')
     .then((value) => {
         console.log(value);
         if(value.password===password){

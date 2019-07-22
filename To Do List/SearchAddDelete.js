@@ -6,6 +6,7 @@
 
 let v = 0;
 let m = 0;
+let i = 0;
 let userData = {};
 
 function panelSearch() {
@@ -24,6 +25,7 @@ function panelSearch() {
 
 function addProject() {
 //add the project to the sidebar as a link
+f=document.getElementById("form1");
 title = document.getElementById("taskName").value;
 if (title===""){
     return;
@@ -41,6 +43,14 @@ taskDiv.append(title);
 taskDiv.append(deleteBtn);
 sidebar.append(taskDiv);
 document.getElementById('taskName').value = ''
+
+//delete current task list on main page
+var myNode = document.getElementById("form1");
+console.log(myNode)
+while (myNode.firstChild) {
+    myNode.removeChild(myNode.firstChild);
+}
+
 //addProject() calls the API to add a project to table
 }
 
@@ -54,13 +64,20 @@ taskDiv.parentNode.removeChild(taskDiv);
 }
 
 function addTask() {
+    f=document.getElementById("form1");
     member = "";
     member = document.getElementById("task1").value;
     if (member===""){
         return;
     }
     const childPara = document.createElement('p');
+    childPara.setAttribute("class", "deleteMe");
+    //  childPara.id(i);
+    //  i++;
     const checkBox = document.createElement("input");
+    //checkBox.setAttribute("class", "democlass");
+    
+    
     m++
     checkBox.setAttribute('type', 'checkbox');
     checkBox.addEventListener('click', (ev) => {
@@ -73,9 +90,11 @@ function addTask() {
         }
         progressBar()
     });
+    
     childPara.innerText = member;
     childPara.append(checkBox);
-    parent1.append(childPara);
+    //parent1.append(childPara);
+    f.appendChild(childPara);
     document.getElementById('task1').value = ''
     progressBar();
 }
