@@ -1,3 +1,33 @@
+function addProjectToAPI(method, url) {
+let projectData = {};
+
+    var myNode = document.getElementById("form1");
+console.log(myNode)
+
+while (myNode.firstChild) {
+    
+    //add the node to userdata
+    value = myNode.removeChild(myNode.firstChild);
+    projectData.keyi = value;
+
+}
+    
+    // userData[element.username] = element.value;
+    // userData[element.id] = element.value;   
+    
+    makeRequest('POST', 'localhost:8080/ProjectAPI/api/account/addProject', projectData)
+        .then((value) => {
+        // const dataString = JSON.stringify(userData);
+        // sessionStorage.setItem('userData', dataString);
+        console.log("successfully registered");
+        window.location = 'Login.html'
+            console.log(value);
+        }).catch((error) => {
+            console.warn(error);
+        });
+       
+    }
+
 function registerUser(method, url) {
 
 const username = document.getElementById("username").value;
@@ -19,7 +49,6 @@ makeRequest('POST', 'localhost:8080/ProjectAPI/api/account/create', userData)
     }).catch((error) => {
         console.warn(error);
     });
-   
 }
 
 function login(username, password) {

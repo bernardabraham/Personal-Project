@@ -22,7 +22,7 @@ function panelSearch() {
     //else return;
 }
 
-
+var k=0;
 function addProject() {
 //add the project to the sidebar as a link
 f=document.getElementById("form1");
@@ -44,12 +44,30 @@ taskDiv.append(deleteBtn);
 sidebar.append(taskDiv);
 document.getElementById('taskName').value = ''
 
-//delete current task list on main page
+
+
+
+// let userData = {};
+
+//     for (let element of form1.elements) {
+        
+//         userData[element.k] = element.value;
+//         console.log(k);
+//         console.log(element.value);
+//         k++
+
+        const dataString = JSON.stringify(form1);
+        console.log(dataString);
+        sessionStorage.setItem('userData', dataString);
+    // }
+   
+
 var myNode = document.getElementById("form1");
-console.log(myNode)
 while (myNode.firstChild) {
     myNode.removeChild(myNode.firstChild);
 }
+ppp = JSON.parse(dataString);
+document.write(ppp);
 
 //addProject() calls the API to add a project to table
 }
