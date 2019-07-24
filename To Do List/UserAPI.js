@@ -15,7 +15,7 @@ while (myNode.firstChild) {
     // userData[element.username] = element.value;
     // userData[element.id] = element.value;   
     
-    makeRequest('POST', 'localhost:8080/ProjectAPI/api/account/addProject', projectData)
+    makeRequest('POST', 'http://localhost:8080/ProjectAPI/api/account/addProject', userData)
         .then((value) => {
         // const dataString = JSON.stringify(userData);
         // sessionStorage.setItem('userData', dataString);
@@ -28,23 +28,22 @@ while (myNode.firstChild) {
        
     }
 
-function registerUser(method, url) {
 
+function registerUser(method, url) {
 const username = document.getElementById("username").value;
 const password = document.getElementById("password").value;
-const firstName = document.getElementById("firstName").value;
-const lastName = document.getElementById("lastName").value;
+const email = document.getElementById("email").value;
 
-const userData = {'username': username, 'password': password, 'firstName' :firstName, 'lastName':lastName}
+const userData = {'username': username, 'password': password, 'email' : email}
+console.log(userData);
 // userData[element.username] = element.value;
 // userData[element.id] = element.value;   
 
-makeRequest('POST', 'localhost:8080/ProjectAPI/api/account/create', userData)
+makeRequest('POST', 'http://localhost:8080/ProjectAPI/api/account/create', userData)
     .then((value) => {
     // const dataString = JSON.stringify(userData);
     // sessionStorage.setItem('userData', dataString);
     console.log("successfully registered");
-    window.location = 'Login.html'
         console.log(value);
     }).catch((error) => {
         console.warn(error);
@@ -53,29 +52,35 @@ makeRequest('POST', 'localhost:8080/ProjectAPI/api/account/create', userData)
 
 function login(username, password) {
 
-// const username = document.getElementById("username")
-// const password = document.getElementById("password")
- 
+const username1 = document.getElementById("username").value   
+const password1 = document.getElementById("password").value
+console.log(username1)
 
-makeRequest('GET', 'localhost:8080/ProjectAPI/api/account/getUser/')
+makeRequest('GET', 'http://localhost:8080/ProjectAPI/api/account/get/' + username1)
     .then((value) => {
         console.log(value);
-        if(value.password===password){
-
-        sessionStorage.setItem('userData', username);
-        window.location = 'UserDetails.html'
+        console.log(value.password)
+        if(value.password===password1){
+            console.log("success");
+        sessionStorage.setItem('userData', username1);
+        window.location = '../Main.html'
+    } else {
+        console.log("fail");
+        
+        
     }
 
     }).catch((error) => {
         console.warn(error);
-        
+        div = document.getElementById("add");
+        div.append("Please input correct details");
     });
 }
 
 function displayUser(method, url, username, userId) {
     const data = sessionStorage.getItem("userData");
 
-    makeRequest('GET', ' localhost:8080/ProjectAPI/api/account/get/' + UserId)
+    makeRequest('GET', 'http://localhost:8080/ProjectAPI/api/account/get/' + UserId)
     .then((value) => {
     for(key in value){
         if (username == key){
@@ -90,30 +95,39 @@ function displayUser(method, url, username, userId) {
     }).catch((error) => {
         console.warn(error);
     });
-    console.log(value); //prints out details
+    console.log(value); 
   
 }
 
-//2)deletes user, returns to login page
-function deleteUser(method, url, UserId) {
+function deleteUser(method, url) {
 
-//set username to equal the value of the element
-const username = document.getElementById("username") 
-makeRequest('DELETE', 'localhost:8080/ProjectAPI/api/account/delete/'+ UserId)
+const username = document.getElementById("username")     
+
+    makeRequest('GET', 'http://localhost:8080/ProjectAPI/api/account/get')
+    .then((value) => {
+        console.log(value);
+        value.userId
+    }
+    ).catch((error) => {
+        console.warn(error);  
+    });
+
+
+makeRequest('DELETE', 'http://localhost:8080/ProjectAPI/api/account/delete/'+ value.userId)
     .then((value) => {
         console.log(value);
     }).catch((error) => {
         console.warn(error);
     });   
-    window.location = 'login.html'; //return to login page 
 }
 
-//3)updates user and sends to login page    
+
+   
 function updateUser(method, url, UserId) {
-const username = document.getElementById("username")
-const password = document.getElementById("password")
-//set username to equal the value of the element
-    makeRequest('POST', 'localhost:8080/ProjectAPI/api/account/update/' + UserId + +username+'&password='+password)
+// const username = document.getElementById("username")
+// const password = document.getElementById("password")
+
+    makeRequest('POST', 'http://localhost:8080/ProjectAPI/api/account/update/' + UserId + +username+'&password='+password)
     .then((value) => {
         console.log(value);
     }).catch((error) => {
@@ -121,7 +135,7 @@ const password = document.getElementById("password")
     });
     console.log(input);
 
-    window.location = 'login.html';
+    // window.location = 'login.html';
 
     return false;
 }

@@ -1,30 +1,32 @@
 <html>
-   
+    <link href="Main.css" rel="stylesheet" type="text/css"></link>
 
 <head>
 
     </head>
+    <button id="goHome" onclick="return window.location = 'Login.html'">back</button>
     <body>
         <form onsubmit="return handleSubmit(this);" action="">
-<p for="username">Username</p>
+<p for="username">username</p>
 <input id="username" type="text">
-<p for="username">Password</p>
+<p for="username">password</p>
 <input id= "password" type="password">
-<p for="username">First Name</p>
-<input id="username" type="text">
-<p for="username">Last Name</p>
-<input id= "password" type="text">
+<p for="username">email</p>
+<input id="email" type="email">
+
 
 
 </form>
+
         
-        <button id="deleteButton" onclick="return deleteUser()">Delete</button>
-        //deletes user details and sends you to login page
+        
 
 <button id="registerButton" onclick="return registerUser()">Register</button> //send you to details
 
-        <script src="jsonPromise.js"></script> //this is the JSON script
-        <script src="LoginPage.js"></script>
+        <script src="../jsonPromise.js"></script> 
+        <script src="../UserAPI.js"></script>
+        <script src="../MiscFunctions.js"></script>
+        <script src="../SearchAddDelete.js"></script>
 
 
     </body>

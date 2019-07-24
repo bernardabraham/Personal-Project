@@ -1,11 +1,11 @@
 <html>
- 
+    <link href="Main.css" rel="stylesheet" type="text/css"></link>
 
 <head>
 
     </head>
     <body>
-        <form onsubmit="return handleSubmit(this);" action="">
+        
 <p for="username">Username</p>
 <input id="username" type="text">
 <p for="password">Password</p>
@@ -14,11 +14,13 @@
 <button id="loginButton" onclick="return login()">Login</button> 
 </form>
         
-<button id="registerButton" onclick="return goToRegister()">Register</button>
+Not signed up? <button id="registerButton" onclick="return window.location = 'Register.html'">Register Now</button>
+<p id = "add"></p>
 
-
-        <script src="jsonPromise.js"></script> //Also the Home Page
-        <script src="Login.js"></script>
+<script src="../jsonPromise.js"></script>
+<script src="../UserAPI.js"></script>
+<script src="../MiscFunctions.js"></script>
+<script src="../SearchAddDelete.js"></script>
 
     
     </body>

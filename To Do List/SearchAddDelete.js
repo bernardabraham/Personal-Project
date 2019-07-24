@@ -1,13 +1,8 @@
-//5) Task Sidebar. It saves the information from previous tasks in a database
-//when you click it it populates the task 1 div. It has a scroll wheel to go through
-//tasks
-//6) Search. Searches the headers and maybe descriptions for words matching the search
-//clears the side panel then populates it with only the matching searches
 
 let v = 0;
 let m = 0;
 let i = 0;
-let userData = {};
+// let userData = {};
 
 function panelSearch() {
     search = document.getElementById("searchbar").value;
