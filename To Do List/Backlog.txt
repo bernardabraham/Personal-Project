@@ -1,8 +1,5 @@
-1) API to add, delete, update, view users
-4) Add project, request project functions
-3) Database relationship
-5) CSS color, theme, layout, buttons
-6)
-7)
-8)
-9)
+1) Add project, request project functions
+2) Database relationship
+3) CSS color, theme, layout, buttons
+4) Update User
+
