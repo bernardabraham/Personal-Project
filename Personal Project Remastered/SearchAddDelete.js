@@ -10,32 +10,40 @@ function panelSearch() {
     if (search===""){
         return;
     }
-    console.log("hi");
-// for (i=0; i<10; i++){
-//     if (search === title){
-//}
-    //else return;
+    var myNode = document.getElementById("sidebarId");
+    var children = myNode.children;
+for (var i = 0; i < children.length; i++) {
+    while (children[i].innerText!=search) {
+     if (children[i].innerText!=search){
+        children[i].parentNode.removeChild(children[i]);
+    }
+}
+}
+
 }
 
 function appendProject() {
     f=document.getElementById("form1");
-sidebarId=document.getElementById("sidebar-wrapper");
+sidebarId=document.getElementById("sidebarId");
 projectTitle = document.getElementById("projectName").value;
 if (projectTitle===""){
     return;
 }
-const deleteBtn = document.createElement("button");
-deleteBtn.setAttribute('type', 'button');
-deleteBtn.id="deleteButton";
-deleteBtn.innerText="delete";
-deleteBtn.addEventListener('click', (ev) => {
-deleteTask(ev.target)
-});
+// const deleteBtn = document.createElement("button");
+// deleteBtn.setAttribute('type', 'button');
+// deleteBtn.id="deleteButton";
+// deleteBtn.innerText="delete";
+// deleteBtn.addEventListener('click', (ev) => {
+// deleteTask(ev.target)
+// });
 
 const projectDiv = document.createElement('div');
 projectDiv.setAttribute('class', 'list-group-item list-group-item-action bg-light">Dashboard2</a>');
+projectDiv.addEventListener('click', (ev) => {
+    testprint(ev.target)
+    });
 projectDiv.append(projectTitle);
-projectDiv.append(deleteBtn);
+// projectDiv.append(deleteBtn);
 sidebarId.append(projectDiv)
 
 document.getElementById('projectName').value = ''

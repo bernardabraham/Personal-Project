@@ -28,8 +28,11 @@
     <!-- Sidebar -->
     <div class="bg-light border-right" id="sidebar-wrapper">
       <div class="sidebar-heading">Saved Projects </div>
+    <input id= "searchbar" type="search" class="list-group list-group-flush" onkeypress="return runScript3(event)">
+    <button class="button" id="submit3" onclick = "return panelSearch()">Search</button> 
+      
       <div class="list-group list-group-flush">
-        
+        <div id = "sidebarId"></div>
         
       </div>
     </div>
