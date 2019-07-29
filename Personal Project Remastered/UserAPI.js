@@ -28,39 +28,13 @@ function addProjectToAPI(method, url) {
 
 }
 
-function testsave() {
-    
-
-var myNode = document.getElementById("form1");
-const dataString = JSON.stringify(form1);
-console.log(form1)
-console.log(dataString);
-
-// while (myNode.firstChild) {
-// myNode.appendChild(myNode.firstChild)
-
-    // const newcontent = {'taskContent' : content};
-    // const checked = true;
-    // const userData = { 'checked': checked, 'taskContent': content }
-
-    makeRequest('POST', 'http://localhost:8080/ProjectAPI/api/task/create', userData)
-        .then((value) => {
-
-            console.log("successfully registered");
-            console.log(value);
-        }).catch((error) => {
-            console.warn(error);
-        });
-
-}
-
 function testprint() {
     content = 'hey';
     makeRequest('GET', 'http://localhost:8080/ProjectAPI/api/task/getAll')
         .then((value) => {
             f = document.getElementById("form1");
             for (let i = 1; i <= value.length; i++) {
-                
+
                 member = value[i].taskContent;
 
                 const childPara = document.createElement('p');
@@ -124,11 +98,11 @@ function registerUser(method, url) {
 
 
 function login(username, password) {
-if (document.getElementById("username") === null || document.getElementById("password") === null){
-    div = document.getElementById("register1");
-    div.append("Please input correct details");
-    return ;
-}
+    if (document.getElementById("username") === null || document.getElementById("password") === null) {
+        div = document.getElementById("register1");
+        div.append("Please input correct details");
+        return;
+    }
 
     div = document.getElementById("register1");
     div.append("Please input correct details");

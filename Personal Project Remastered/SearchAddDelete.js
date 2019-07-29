@@ -2,138 +2,151 @@
 let v = 0;
 let m = 0;
 let i = 0;
-var k=0;
+var k = 0;
+let projectId = 0;
 // let userData = {};
 
 function panelSearch() {
     search = document.getElementById("searchbar").value;
-    if (search===""){
+    if (search === "") {
         return;
     }
     var myNode = document.getElementById("sidebarId");
     var children = myNode.children;
-for (var i = 0; i < children.length; i++) {
-    while (children[i].innerText!=search) {
-     if (children[i].innerText!=search){
-        children[i].parentNode.removeChild(children[i]);
+    for (var i = 0; i < children.length; i++) {
+        while (children[i].innerText != search) {
+            if (children[i].innerText != search) {
+                children[i].parentNode.removeChild(children[i]);
+            }
+        }
     }
-}
-}
 
 }
 
 function appendProject() {
-    f=document.getElementById("form1");
-sidebarId=document.getElementById("sidebarId");
-projectTitle = document.getElementById("projectName").value;
-if (projectTitle===""){
-    return;
-}
-// const deleteBtn = document.createElement("button");
-// deleteBtn.setAttribute('type', 'button');
-// deleteBtn.id="deleteButton";
-// deleteBtn.innerText="delete";
-// deleteBtn.addEventListener('click', (ev) => {
-// deleteTask(ev.target)
-// });
+    f = document.getElementById("form1");
+    sidebarId = document.getElementById("sidebarId");
+    projectTitle = document.getElementById("projectName").value;
+    if (projectTitle === "") {
+        return;
+    }
+    // const deleteBtn = document.createElement("button");
+    // deleteBtn.setAttribute('type', 'button');
+    // deleteBtn.id="deleteButton";
+    // deleteBtn.innerText="delete";
+    // deleteBtn.addEventListener('click', (ev) => {
+    // deleteTask(ev.target)
+    // });
 
-const projectDiv = document.createElement('div');
-projectDiv.setAttribute('class', 'list-group-item list-group-item-action bg-light">Dashboard2</a>');
-projectDiv.addEventListener('click', (ev) => {
-    testprint(ev.target)
+    const projectDiv = document.createElement('div');
+    projectDiv.setAttribute('class', 'list-group-item list-group-item-action bg-light">Dashboard2</a>');
+    projectDiv.addEventListener('click', (ev) => {
+        testprint(ev.target)
     });
-projectDiv.append(projectTitle);
-// projectDiv.append(deleteBtn);
-sidebarId.append(projectDiv)
+    projectDiv.append(projectTitle);
+    // projectDiv.append(deleteBtn);
+    sidebarId.append(projectDiv)
 
-document.getElementById('projectName').value = ''
+    document.getElementById('projectName').value = ''
 
-const dataString = JSON.stringify(form1);
-        sessionStorage.setItem('userData', dataString);
+    const dataString = JSON.stringify(form1);
+    sessionStorage.setItem('userData', dataString);
     // }
-   
 
-var myNode = document.getElementById("form1");
-while (myNode.firstChild) {
-    myNode.removeChild(myNode.firstChild);
-    
-    
-}
+
+    var myNode = document.getElementById("form1");
+    while (myNode.firstChild) {
+        myNode.removeChild(myNode.firstChild);
+
+
+    }
 }
 
 
 // project.setAttribute(<a href="#");
 function addProject() {
+    projectId++
 
-f=document.getElementById("form1");
-sidebar=document.getElementById("sidebar-wrapper");
-title = document.getElementById("projectName").value;
-if (title===""){
-    return;
-}
-const deleteBtn = document.createElement("button");
-deleteBtn.setAttribute('type', 'button');
-deleteBtn.id="deleteButton";
-deleteBtn.innerText="delete";
-deleteBtn.addEventListener('click', (ev) => {
-deleteTask(ev.target)
-});
+    f = document.getElementById("form1");
+    sidebar = document.getElementById("sidebar-wrapper");
+    title = document.getElementById("projectName").value;
+    if (title === "") {
+        return;
+    }
+    const deleteBtn = document.createElement("button");
+    deleteBtn.setAttribute('type', 'button');
+    deleteBtn.id = "deleteButton";
+    deleteBtn.innerText = "delete";
+    deleteBtn.addEventListener('click', (ev) => {
+        deleteTask(ev.target)
+    });
 
-const taskDiv = document.createElement('div');
-taskDiv.append(title);
-taskDiv.append(deleteBtn);
-sidebar.append(taskDiv);
-document.getElementById('projectName').value = ''
+    const taskDiv = document.createElement('div');
+    taskDiv.append(title);
+    taskDiv.append(deleteBtn);
+    sidebar.append(taskDiv);
+    document.getElementById('projectName').value = ''
 
-// let userData = {};
+    // let userData = {};
 
-//     for (let element of form1.elements) {
-        
-//         userData[element.k] = element.value;
-//         console.log(k);
-//         console.log(element.value);
-//         k++
+    //     for (let element of form1.elements) {
 
-        const dataString = JSON.stringify(form1);
-        sessionStorage.setItem('userData', dataString);
+    //         userData[element.k] = element.value;
+    //         console.log(k);
+    //         console.log(element.value);
+    //         k++
+
+    const dataString = JSON.stringify(form1);
+    sessionStorage.setItem('userData', dataString);
     // }
-   
-
-var myNode = document.getElementById("form1");
-while (myNode.firstChild) {
-    myNode.removeChild(myNode.firstChild);
-}
 
 
-//addProject() calls the API to add a project to table
+    var myNode = document.getElementById("form1");
+    while (myNode.firstChild) {
+        myNode.removeChild(myNode.firstChild);
+    }
+    
+
+    //addProject() calls the API to add a project to table
 }
 
 function printProject(method, url, username) {
-    
-    }
 
-function deleteTask(button){
-var taskDiv = button.parentNode;
-taskDiv.parentNode.removeChild(taskDiv);
+}
+
+function deleteTask(button) {
+    var taskDiv = button.parentNode;
+    taskDiv.parentNode.removeChild(taskDiv);
+}
+
+let userData = [];
+
+function testsave() {
+    for (let task in userData) {
+        makeRequest('POST', 'http://localhost:8080/ProjectAPI/api/task/create', task)
+            .then((value) => {
+
+                console.log("successfully registered");
+                console.log(value);
+            }).catch((error) => {
+                console.warn(error);
+            });
+    }
 }
 
 function addTask() {
-    f=document.getElementById("form1");
-    member = "";
-    member = document.getElementById("task1").value;
-    if (member===""){
+    let completeStatus= false;
+    let f = document.getElementById("form1");
+    let member = document.getElementById("task1").value;
+    if (member.length == 0) {
         return;
     }
     const childPara = document.createElement('p');
     childPara.setAttribute("class", "deleteMe");
-    
-
-    //  childPara.id(i);
-    //  i++;
+    childPara.setAttribute("id", m);
 
     const checkBox = document.createElement("input");
-     checkBox.setAttribute("class", "deleteMe");
-    
+    checkBox.setAttribute("class", "deleteMe");
 
     m++
     checkBox.setAttribute('type', 'checkbox');
@@ -141,19 +154,28 @@ function addTask() {
         if (ev.target.checked) {
             ev.target.parentElement.style.textDecoration = "line-through";
             v++
+            completeStatus= true;
+            task = {"Project": projectId, "Task Content": member, "Completed": completeStatus};
+            console.log(task);
         } else {
             ev.target.parentElement.style.textDecoration = "none";
             v--
+            completeStatus= false;
+            task = {"Project": projectId, "Task Content": member, "Completed": completeStatus};
+            console.log(task);
         }
         progressBar()
     });
-    
+
     childPara.innerText = member;
     childPara.append(checkBox);
-    //parent1.append(childPara);
     f.appendChild(childPara);
     document.getElementById('task1').value = ''
     progressBar();
-}
 
+    task = {"Project": projectId, "Task Content": member, "Completed": completeStatus};
+    console.log(task);
+    userData.push(task);
+    console.log(userData);
+}
 

@@ -11,7 +11,7 @@ import javax.ws.rs.PathParam;
 
 import service.TaskService;
 
-@Path("/account")
+@Path("/task")
 public class TaskController {
 
 	@Inject
@@ -25,8 +25,8 @@ public class TaskController {
 	
 	@POST
 	@Path("/create")
-	public String createAccount(String account) {
-		return this.service.createAccount(account);
+	public String createAccount(String task) {
+		return this.service.createAccount(task);
 	}
 	@DELETE
 	@Path("/delete/{id}")

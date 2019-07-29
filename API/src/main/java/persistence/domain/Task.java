@@ -1,40 +1,67 @@
 package persistence.domain;
 
+import javax.persistence.Column;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 
 public class Task {
-	
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int taskId;
-	private int projectId;
+
+	@OneToMany(mappedBy = "projectId")
+	@Column(name = "project_id")
+	private Project project;
+
 	private String taskContent;
-	public Task(int taskId, int projectId, String content) {
+
+	private boolean completed;
+
+	public Task(int taskId, Project project, String taskContent, boolean completed) {
 		super();
 		this.taskId = taskId;
-		this.projectId = projectId;
-		this.taskContent = content;
+		this.project = project;
+		this.taskContent = taskContent;
+		this.completed = completed;
 	}
+
+	public Task() {
+		super();
+	}
+
 	public int getTaskId() {
 		return taskId;
 	}
+
 	public void setTaskId(int taskId) {
 		this.taskId = taskId;
 	}
-	public int getProjectId() {
-		return projectId;
+
+	public Project getProject() {
+		return project;
 	}
-	public void setProjectId(int projectId) {
-		this.projectId = projectId;
+
+	public void setProject(Project project) {
+		this.project = project;
 	}
-	public String getContent() {
+
+	public String getTaskContent() {
 		return taskContent;
 	}
-	public void setContent(String content) {
-		this.taskContent = content;
+
+	public void setTaskContent(String taskContent) {
+		this.taskContent = taskContent;
 	}
-	
+
+	public boolean isCompleted() {
+		return completed;
+	}
+
+	public void setCompleted(boolean completed) {
+		this.completed = completed;
+	}
 
 }
