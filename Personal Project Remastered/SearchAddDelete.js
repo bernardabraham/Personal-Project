@@ -24,27 +24,29 @@ function panelSearch() {
 }
 
 function appendProject() {
+    projectId++
+console.log(projectId);
     f = document.getElementById("form1");
     sidebarId = document.getElementById("sidebarId");
     projectTitle = document.getElementById("projectName").value;
     if (projectTitle === "") {
         return;
     }
-    // const deleteBtn = document.createElement("button");
-    // deleteBtn.setAttribute('type', 'button');
-    // deleteBtn.id="deleteButton";
-    // deleteBtn.innerText="delete";
-    // deleteBtn.addEventListener('click', (ev) => {
-    // deleteTask(ev.target)
-    // });
 
     const projectDiv = document.createElement('div');
     projectDiv.setAttribute('class', 'list-group-item list-group-item-action bg-light">Dashboard2</a>');
     projectDiv.addEventListener('click', (ev) => {
         testprint(ev.target)
     });
+    const deleteBtn = document.createElement("button");
+    deleteBtn.setAttribute('type', 'button');
+    deleteBtn.id="deleteButton";
+    deleteBtn.innerText="delete";
+    deleteBtn.addEventListener('click', (ev) => {
+    deleteTask(ev.target)
+    });
     projectDiv.append(projectTitle);
-    // projectDiv.append(deleteBtn);
+    projectDiv.append(deleteBtn);
     sidebarId.append(projectDiv)
 
     document.getElementById('projectName').value = ''
@@ -62,11 +64,13 @@ function appendProject() {
     }
 }
 
+function deleteProject(){
+     
+}
 
 // project.setAttribute(<a href="#");
 function addProject() {
-    projectId++
-
+    
     f = document.getElementById("form1");
     sidebar = document.getElementById("sidebar-wrapper");
     title = document.getElementById("projectName").value;
