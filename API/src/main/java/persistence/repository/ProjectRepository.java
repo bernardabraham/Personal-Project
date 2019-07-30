@@ -2,9 +2,10 @@ package persistence.repository;
 
 public interface ProjectRepository{
 	
-	String getAllAccounts();
-	String createAccount(String account);
-	String deleteAccount(int id);
-	String updateAccount(int id, String account);
+	String getAllProjects();
+	String getProject(int projectId);
+	String createProject(String project, int userId);
+	String deleteProject(int id);
+	String updateProject(int id, String project);
 
 }

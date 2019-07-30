@@ -11,7 +11,7 @@ import javax.ws.rs.PathParam;
 
 import service.ProjectService;
 
-@Path("/account")
+@Path("/project")
 public class ProjectController {
 
 	@Inject
@@ -19,23 +19,30 @@ public class ProjectController {
 
 	@GET
 	@Path("/getAll")
-	public String getAllAccounts() {
-		return this.service.getAllAccounts();
+	public String getAllProjects() {
+		return this.service.getAllProjects();
 	}
 	
+	@GET
+	@Path("/get/{projectId}")
+	public String getProject(@PathParam("projectId") int projectId) throws AccountNotFoundException {
+		return this.service.getProject(projectId);
+	}
+	
+	
 	@POST
-	@Path("/create")
-	public String createAccount(String account) {
-		return this.service.createAccount(account);
+	@Path("/create/{userId}")
+	public String createProject(String project, @PathParam("userId")  int userId) {
+		return this.service.createProject(project, userId);
 	}
 	@DELETE
 	@Path("/delete/{id}")
-	public String deleteAccount(@PathParam("id") int id) throws AccountNotFoundException {
-		return this.service.deleteAccount(id);
+	public String deleteProject(@PathParam("id") int id) throws AccountNotFoundException {
+		return this.service.deleteProject(id);
 	}
 	@POST
 	@Path("/update/{id}")
-	public String updateAccount(@PathParam("id") int id, String account) throws AccountNotFoundException {
-		return this.service.updateAccount(id, account);
+	public String updateProject(@PathParam("id") int id, String project) throws AccountNotFoundException {
+		return this.service.updateProject(id, project);
 	}
 }

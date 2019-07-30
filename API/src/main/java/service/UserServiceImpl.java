@@ -11,6 +11,10 @@ public class UserServiceImpl implements UserService {
 
 	@Inject
 	private UserRepository repo;
+	
+	public String getAccount(String content) {
+		return this.repo.getAccount(content);
+	}
 
 	public String getAllAccounts() {
 		return this.repo.getAllAccounts();

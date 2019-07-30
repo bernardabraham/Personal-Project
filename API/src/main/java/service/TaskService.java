@@ -4,13 +4,15 @@ import javax.security.auth.login.AccountNotFoundException;
 
 
 public interface TaskService {
-	String getAllAccounts();
+	
+	String getTask(int projectId);
+	
+	String getAllTasks();
 
-	String createAccount(String account);
+	String createTask(String account, int projectId);
 
-	String deleteAccount(int accountId) throws AccountNotFoundException;
+	String deleteTask(String taskContent) throws AccountNotFoundException;
 
-	String updateAccount(int accountId, String account) throws AccountNotFoundException;
 
 
 }

@@ -16,26 +16,28 @@ public class TaskController {
 
 	@Inject
 	private TaskService service;
+	
+	@GET
+	@Path("/get/{projectId}")
+	public String getTask(@PathParam("projectId") int projectId) throws AccountNotFoundException {
+		return this.service.getTask(projectId);
+	}
 
 	@GET
 	@Path("/getAll")
-	public String getAllAccounts() {
-		return this.service.getAllAccounts();
+	public String getAllTasks() {
+		return this.service.getAllTasks();
 	}
 	
 	@POST
-	@Path("/create")
-	public String createAccount(String task) {
-		return this.service.createAccount(task);
+	@Path("/create/{projectId}")
+	public String createTask(String account, @PathParam("projectId") int projectId) {
+		return this.service.createTask(account, projectId);
 	}
 	@DELETE
 	@Path("/delete/{id}")
-	public String deleteAccount(@PathParam("id") int id) throws AccountNotFoundException {
-		return this.service.deleteAccount(id);
+	public String deleteTask(@PathParam("taskContent") String taskContent) throws AccountNotFoundException {
+		return this.service.deleteTask(taskContent);
 	}
-	@POST
-	@Path("/update/{id}")
-	public String updateAccount(@PathParam("id") int id, String account) throws AccountNotFoundException {
-		return this.service.updateAccount(id, account);
-	}
+	
 }

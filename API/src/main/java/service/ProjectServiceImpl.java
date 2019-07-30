@@ -4,28 +4,32 @@ package service;
 import javax.inject.Inject;
 import javax.security.auth.login.AccountNotFoundException;
 
-import persistence.repository.UserRepository;
+import persistence.repository.ProjectRepository;
 
 
 public class ProjectServiceImpl implements ProjectService {
 
 	@Inject
-	private UserRepository repo;
+	private ProjectRepository repo;
 
-	public String getAllAccounts() {
-		return this.repo.getAllAccounts();
+	public String getAllProjects() {
+		return this.repo.getAllProjects();
+	}
+	
+	public String getProject(int projectId) {
+		return this.repo.getProject(projectId);
 	}
 
-	public String createAccount(String account) {
-		return this.repo.createAccount(account);
+	public String createProject(String project, int userId) {
+		return this.repo.createProject(project, userId);
 	}
 
-	public String deleteAccount(int Id) throws AccountNotFoundException {
-		return this.repo.deleteAccount(Id);
+	public String deleteProject(int Id) throws AccountNotFoundException {
+		return this.repo.deleteProject(Id);
 	}
 
-	public String updateAccount(int Id, String account) throws AccountNotFoundException {
-		return this.repo.updateAccount(Id, account);
+	public String updateProject(int Id, String project) throws AccountNotFoundException {
+		return this.repo.updateProject(Id, project);
 	}
 
 }

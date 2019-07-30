@@ -4,13 +4,15 @@ import javax.security.auth.login.AccountNotFoundException;
 
 
 public interface ProjectService {
-	String getAllAccounts();
+	String getAllProjects();
+	
+	String getProject(int projectId);
 
-	String createAccount(String account);
+	String createProject(String project, int userId);
 
-	String deleteAccount(int accountId) throws AccountNotFoundException;
+	String deleteProject(int projectId) throws AccountNotFoundException;
 
-	String updateAccount(int accountId, String account) throws AccountNotFoundException;
+	String updateProject(int projectId, String project) throws AccountNotFoundException;
 
 
 }

@@ -3,8 +3,9 @@ let v = 0;
 let m = 0;
 let i = 0;
 var k = 0;
-let projectId = 0;
-// let userData = {};
+let projectId = 1;
+let userData = [];
+
 
 function panelSearch() {
     search = document.getElementById("searchbar").value;
@@ -24,11 +25,26 @@ function panelSearch() {
 }
 
 function appendProject() {
-    projectId++
-console.log(projectId);
     f = document.getElementById("form1");
     sidebarId = document.getElementById("sidebarId");
     projectTitle = document.getElementById("projectName").value;
+
+    userId = sessionStorage.getItem("usernameId");
+    console.log(userId);
+
+    userData = {'projectName': projectTitle}
+    makeRequest('POST', 'http://localhost:8080/ProjectAPI/api/project/create/' + userId, userData)
+    .then((value) => {
+
+        console.log("successfully registered");
+        console.log(value);
+    }).catch((error) => {
+        console.warn(error);
+    });
+
+    
+console.log(projectId);
+    
     if (projectTitle === "") {
         return;
     }
@@ -60,9 +76,12 @@ console.log(projectId);
     while (myNode.firstChild) {
         myNode.removeChild(myNode.firstChild);
 
-
     }
+    projectId++
+    console.log("project id" + projectId);
+    userData = [];
 }
+
 
 function deleteProject(){
      
@@ -123,11 +142,14 @@ function deleteTask(button) {
     taskDiv.parentNode.removeChild(taskDiv);
 }
 
-let userData = [];
+
 
 function testsave() {
+
     for (let task in userData) {
-        makeRequest('POST', 'http://localhost:8080/ProjectAPI/api/task/create', task)
+        // console.log(userData[task]);
+        // console.log(projectId);
+        makeRequest('POST', 'http://localhost:8080/ProjectAPI/api/task/create/' + projectId, userData[task])
             .then((value) => {
 
                 console.log("successfully registered");
@@ -159,13 +181,13 @@ function addTask() {
             ev.target.parentElement.style.textDecoration = "line-through";
             v++
             completeStatus= true;
-            task = {"Project": projectId, "Task Content": member, "Completed": completeStatus};
+            task = {"taskContent": member, "checked": completeStatus};
             console.log(task);
         } else {
             ev.target.parentElement.style.textDecoration = "none";
             v--
             completeStatus= false;
-            task = {"Project": projectId, "Task Content": member, "Completed": completeStatus};
+            task = {"taskContent": member, "checked": completeStatus};
             console.log(task);
         }
         progressBar()
@@ -177,7 +199,7 @@ function addTask() {
     document.getElementById('task1').value = ''
     progressBar();
 
-    task = {"Project": projectId, "Task Content": member, "Completed": completeStatus};
+    task = {"taskContent": member, "checked": completeStatus};
     console.log(task);
     userData.push(task);
     console.log(userData);

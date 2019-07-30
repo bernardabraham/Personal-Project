@@ -7,7 +7,8 @@ import javax.persistence.TypedQuery;
 import javax.transaction.Transactional;
 import javax.transaction.Transactional.TxType;
 
-import persistence.domain.User;
+import persistence.domain.Project;
+import persistence.domain.Task;
 import util.JSONUtil;
 
 @Default
@@ -17,36 +18,36 @@ public class TaskDatabase implements TaskRepository {
 	@PersistenceContext(unitName = "primary")
 	private EntityManager manager;
 	
+	@Transactional(value = TxType.SUPPORTS)
+	public String getTask(int projectId) {
+		TypedQuery<Task> query = manager.createQuery("select b from Task b where b.projectId = '" + projectId + "'", Task.class);
+		return this.util.getJSONForObject(query.getResultList());
+	}	
 	
 	@Transactional(value = TxType.SUPPORTS)
-	public String getAllAccounts() {
-		TypedQuery<User> query = manager.createQuery("select a from ProjectAccount a", User.class);
+	public String getAllTasks() {
+		TypedQuery<Task> query = manager.createQuery("select a from Task a", Task.class);
 		return this.util.getJSONForObject(query.getResultList());
 	}
 
 	@Transactional(value = TxType.REQUIRED)
-	public String createAccount(String jsonStr) {
-		User account1 = util.getObjectForJSON(jsonStr, User.class);
-		manager.persist(account1);
-		return "Success";
+	public String createTask(String jsonStr, int projectId) {
+		Project u = manager.find(Project.class, projectId);
+		Task task1 = util.getObjectForJSON(jsonStr, Task.class);
+		task1.setProject(u);
+		manager.persist(task1);
+		return "{\"result\" : \"Success1\"}";
 
 	}
 
 	@Transactional(value = TxType.REQUIRED)
-	public String deleteAccount(int id) {
-		this.manager.remove(this.manager.find(User.class, id));
+	public String deleteTask(String taskContent) {
+		this.manager.remove(this.manager.find(Task.class, taskContent));
 		return "Success";
 	}
 
-	@Transactional(value = TxType.REQUIRED)
-	public String updateAccount(int id, String account) {
-		User newAccount = util.getObjectForJSON(account, User.class);
-		User existing = this.manager.find(User.class, id);
-		existing.setUserName(newAccount.getUserName());
-		existing.setPassword(newAccount.getUserName());
-		existing.setEmail(newAccount.getUserName());
-		manager.persist(existing);
-		return "Success";
-	}
+	
+
+
 
 }

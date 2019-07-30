@@ -18,6 +18,8 @@
 
   <body>
 
+      <a href="../Main.html"> Home</a>
+
     <div class="container">
 
       <form class="form-signin">
@@ -26,14 +28,15 @@
         <input type="text" id="username" class="form-control" placeholder="Username" required autofocus>
         <label for="password" class="sr-only">Password</label>
         <input type="password" id="password" class="form-control" placeholder="Password" required>
-        <label for="password" class="sr-only">Confirm Password</label>
+        <label for="password2" class="sr-only">Confirm Password</label>
         <input type="password" id="password2" class="form-control" placeholder="Confirm Password" required>
         <label for="inputEmail" class="sr-only">Email</label>
-        <input type="email" id="email" class="form-control" placeholder="Username" required autofocus>
+        <input type="email" id="email" class="form-control" placeholder="Email" required autofocus>
         
-        <button class="btn btn-lg btn-primary btn-block" type="submit" onclick="return registerUser()">Login</button>
+        <button class="btn btn-lg btn-primary btn-block" type="submit" onclick="return registerUser()">Register</button>
         <p >Already a member? Login <a href="Login.html"> here</a></p>
-        <p id = "register1"></p>
+        <p id = "register1">Please input correct details</p>
+        
       </form>
 
     </div> <!-- /container -->

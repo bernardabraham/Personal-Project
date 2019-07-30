@@ -17,6 +17,12 @@ public class UserDatabase implements UserRepository {
 	@PersistenceContext(unitName = "primary")
 	private EntityManager manager;
 	
+	@Transactional(value = TxType.SUPPORTS)
+	public String getAccount(String username) {
+		TypedQuery<User> query = manager.createQuery("select b from User b where b.username = '" + username + "'", User.class);
+		return this.util.getJSONForObject(query.getSingleResult());
+	}
+	
 	
 	@Transactional(value = TxType.SUPPORTS)
 	public String getAllAccounts() {
@@ -27,8 +33,13 @@ public class UserDatabase implements UserRepository {
 	@Transactional(value = TxType.REQUIRED)
 	public String createAccount(String jsonStr) {
 		User account1 = util.getObjectForJSON(jsonStr, User.class);
+		TypedQuery<User> query = manager.createQuery("select b from User b where b.username = '" + account1.getUsername() + "'", User.class);
+		if(query.getResultList().isEmpty()) {
 		manager.persist(account1);
-		return "Success";
+		return "{\"result\" : \"Success1\"}";
+		} else {
+			return "Username is taken";
+		}
 
 	}
 
@@ -42,11 +53,12 @@ public class UserDatabase implements UserRepository {
 	public String updateAccount(int id, String account) {
 		User newAccount = util.getObjectForJSON(account, User.class);
 		User existing = this.manager.find(User.class, id);
-		existing.setUserName(newAccount.getUserName());
-		existing.setPassword(newAccount.getUserName());
-		existing.setEmail(newAccount.getUserName());
+		existing.setUsername(newAccount.getUsername());
+		existing.setPassword(newAccount.getUsername());
+		existing.setEmail(newAccount.getUsername());
 		manager.persist(existing);
 		return "Success";
 	}
+
 
 }

@@ -7,6 +7,8 @@ import javax.persistence.TypedQuery;
 import javax.transaction.Transactional;
 import javax.transaction.Transactional.TxType;
 
+
+import persistence.domain.Project;
 import persistence.domain.User;
 import util.JSONUtil;
 
@@ -19,32 +21,38 @@ public class ProjectDatabase implements ProjectRepository {
 	
 	
 	@Transactional(value = TxType.SUPPORTS)
-	public String getAllAccounts() {
-		TypedQuery<User> query = manager.createQuery("select a from ProjectAccount a", User.class);
+	public String getAllProjects() {
+		TypedQuery<Project> query = manager.createQuery("select a from ProjectAccount a", Project.class);
 		return this.util.getJSONForObject(query.getResultList());
+	}
+	
+	@Transactional(value = TxType.SUPPORTS)
+	public String getProject(int projectId) {
+		TypedQuery<Project> query = manager.createQuery("select b from User b where b.projectId = '" + projectId + "'", Project.class);
+		return this.util.getJSONForObject(query.getSingleResult());
 	}
 
 	@Transactional(value = TxType.REQUIRED)
-	public String createAccount(String jsonStr) {
-		User account1 = util.getObjectForJSON(jsonStr, User.class);
+	public String createProject(String jsonStr, int userId) {
+		User u = manager.find(User.class, userId);
+		Project account1 = util.getObjectForJSON(jsonStr,  Project.class);
+		account1.setUser(u);
 		manager.persist(account1);
 		return "Success";
 
 	}
 
 	@Transactional(value = TxType.REQUIRED)
-	public String deleteAccount(int id) {
-		this.manager.remove(this.manager.find(User.class, id));
+	public String deleteProject(int id) {
+		this.manager.remove(this.manager.find(Project.class, id));
 		return "Success";
 	}
 
 	@Transactional(value = TxType.REQUIRED)
-	public String updateAccount(int id, String account) {
-		User newAccount = util.getObjectForJSON(account, User.class);
-		User existing = this.manager.find(User.class, id);
-		existing.setUserName(newAccount.getUserName());
-		existing.setPassword(newAccount.getUserName());
-		existing.setEmail(newAccount.getUserName());
+	public String updateProject(int id, String project) {
+		Project newAccount = util.getObjectForJSON(project, Project.class);
+		Project existing = this.manager.find(Project.class, id);
+		existing.setProjectName(newAccount.getProjectName());
 		manager.persist(existing);
 		return "Success";
 	}

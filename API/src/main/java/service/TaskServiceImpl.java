@@ -4,28 +4,31 @@ package service;
 import javax.inject.Inject;
 import javax.security.auth.login.AccountNotFoundException;
 
-import persistence.repository.UserRepository;
+import persistence.repository.TaskRepository;
+
 
 
 public class TaskServiceImpl implements TaskService {
 
 	@Inject
-	private UserRepository repo;
-
-	public String getAllAccounts() {
-		return this.repo.getAllAccounts();
+	private TaskRepository repo;
+	
+	public String getTask(int projectId) {
+		return this.repo.getTask(projectId);
 	}
 
-	public String createAccount(String account) {
-		return this.repo.createAccount(account);
+	public String getAllTasks() {
+		return this.repo.getAllTasks();
 	}
 
-	public String deleteAccount(int Id) throws AccountNotFoundException {
-		return this.repo.deleteAccount(Id);
+	public String createTask(String account, int projectId) {
+		return this.repo.createTask(account, projectId);
 	}
 
-	public String updateAccount(int Id, String account) throws AccountNotFoundException {
-		return this.repo.updateAccount(Id, account);
+	public String deleteTask(String taskContent) throws AccountNotFoundException {
+		return this.repo.deleteTask(taskContent);
 	}
+
+
 
 }

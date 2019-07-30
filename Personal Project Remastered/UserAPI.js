@@ -29,8 +29,8 @@ function addProjectToAPI(method, url) {
 }
 
 function testprint() {
-    content = 'hey';
-    makeRequest('GET', 'http://localhost:8080/ProjectAPI/api/task/getAll')
+const projectId = 1;
+    makeRequest('GET', 'http://localhost:8080/ProjectAPI/api/task/get/' + projectId)
         .then((value) => {
             f = document.getElementById("form1");
             for (let i = 1; i <= value.length; i++) {
@@ -78,8 +78,13 @@ function testprint() {
 function registerUser(method, url) {
     const username = document.getElementById("username").value;
     const password = document.getElementById("password").value;
+    const password2 = document.getElementById("password2").value;
     const email = document.getElementById("email").value;
 
+    console.log(password);
+    console.log(password2);
+if (password === password2)
+    if (password === password2){
     const userData = { 'username': username, 'password': password, 'email': email }
     console.log(userData);
     // userData[element.username] = element.value;
@@ -89,36 +94,41 @@ function registerUser(method, url) {
         .then((value) => {
             // const dataString = JSON.stringify(userData);
             // sessionStorage.setItem('userData', dataString);
+            window.location = 'Login.html';
             console.log("successfully registered");
             console.log(value);
         }).catch((error) => {
             console.warn(error);
+            div = document.getElementById("register1");
+            div.style.display="block";
         });
+    }
+    else{
+        div = document.getElementById("register1");
+        div.style.display="block";
+    }
+    return false;
 }
 
 
-function login(username, password) {
-    if (document.getElementById("username") === null || document.getElementById("password") === null) {
+function login() {
+    if (document.getElementById("username").value === "" || document.getElementById("password").value === "") {
         div = document.getElementById("register1");
-        div.append("Please input correct details");
+        div.style.display="block";
         return;
     }
-
-    div = document.getElementById("register1");
-    div.append("Please input correct details");
-
     const username1 = document.getElementById("username").value
     const password1 = document.getElementById("password").value
-    console.log(username1)
+    
 
     makeRequest('GET', 'http://localhost:8080/ProjectAPI/api/account/get/' + username1)
         .then((value) => {
             console.log(value);
             console.log(value.password)
             if (value.password === password1) {
-                console.log("success");
-                sessionStorage.setItem('userData', username1);
+                sessionStorage.setItem('usernameId', value.userId);
                 window.location = '../Main.html'
+                
             } else {
                 console.log("fail");
 
@@ -126,10 +136,13 @@ function login(username, password) {
             }
 
         }).catch((error) => {
-            console.warn(error);
             div = document.getElementById("register1");
-            div.append("Please input correct details");
+            div.style.display="block";
+            console.warn(error);
+            console.log("hi");
+            
         });
+        return false;
 }
 
 function displayUser(method, url, username, userId) {
