@@ -5,7 +5,7 @@ function makeRequest(method, url, userData) {
         xhr.onload = () => {
 
             if (xhr.status >= 200 && xhr.status <= 299) {
-                console.log(xhr.responseText);
+                //console.log(xhr.responseText);
                 if (xhr.responseText.length > 0) {
                     resolve(JSON.parse(xhr.responseText));
                 }

@@ -38,14 +38,14 @@ public class ProjectDatabase implements ProjectRepository {
 		Project account1 = util.getObjectForJSON(jsonStr,  Project.class);
 		account1.setUser(u);
 		manager.persist(account1);
-		return "Success";
+		return "{\"result\" : \"Success1\"}";
 
 	}
 
 	@Transactional(value = TxType.REQUIRED)
 	public String deleteProject(int id) {
 		this.manager.remove(this.manager.find(Project.class, id));
-		return "Success";
+		return "{\"result\" : \"Success1\"}";
 	}
 
 	@Transactional(value = TxType.REQUIRED)
@@ -54,7 +54,7 @@ public class ProjectDatabase implements ProjectRepository {
 		Project existing = this.manager.find(Project.class, id);
 		existing.setProjectName(newAccount.getProjectName());
 		manager.persist(existing);
-		return "Success";
+		return "{\"result\" : \"Success1\"}";
 	}
 
 }

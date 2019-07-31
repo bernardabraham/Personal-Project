@@ -43,7 +43,7 @@ public class TaskDatabase implements TaskRepository {
 	@Transactional(value = TxType.REQUIRED)
 	public String deleteTask(String taskContent) {
 		this.manager.remove(this.manager.find(Task.class, taskContent));
-		return "Success";
+		return "{\"result\" : \"Username is taken\"}";
 	}
 
 	

@@ -22,6 +22,7 @@ public class UserDatabase implements UserRepository {
 		TypedQuery<User> query = manager.createQuery("select b from User b where b.username = '" + username + "'",
 				User.class);
 		return this.util.getJSONForObject(query.getSingleResult());
+		
 	}
 
 	@Transactional(value = TxType.SUPPORTS)
@@ -47,7 +48,7 @@ public class UserDatabase implements UserRepository {
 	@Transactional(value = TxType.REQUIRED)
 	public String deleteAccount(int id) {
 		this.manager.remove(this.manager.find(User.class, id));
-		return "Success";
+		return "{\"result\" : \"Success1\"}";
 	}
 
 	@Transactional(value = TxType.REQUIRED)
@@ -58,7 +59,7 @@ public class UserDatabase implements UserRepository {
 		existing.setPassword(newAccount.getUsername());
 		existing.setEmail(newAccount.getUsername());
 		manager.persist(existing);
-		return "Success";
+		return "{\"result\" : \"Success1\"}";
 	}
 
 }

@@ -1,3 +1,7 @@
+// const BASE_URL = 'http://35.246.10.215:8081';
+// const BASE_URL = 'http://localhost:8080';
+
+
 function addProjectToAPI(method, url) {
     let projectData = {};
 
@@ -15,7 +19,7 @@ function addProjectToAPI(method, url) {
     // userData[element.username] = element.value;
     // userData[element.id] = element.value;   
 
-    makeRequest('POST', 'http://localhost:8080/ProjectAPI/api/account/addProject', userData)
+    makeRequest('POST', BASE_URL + '/ProjectAPI/api/account/addProject', userData)
         .then((value) => {
             // const dataString = JSON.stringify(userData);
             // sessionStorage.setItem('userData', dataString);
@@ -31,23 +35,28 @@ function addProjectToAPI(method, url) {
 function printProjects(){
     // userId = sessionStorage.getItem("usernameId");
     const userId= 1;
-    console.log("hi");
 
-    makeRequest('GET', 'http://localhost:8080/ProjectAPI/api/project/get/' + userId)
+    makeRequest('GET', BASE_URL + '/ProjectAPI/api/project/get/' + userId)
     .then((value) => {
 
-          for(i = 0; value.length; i++){
+          for(i = 0; i<=value.length-1; i++){
         
         projectId = value[i].projectId;
         projectTitle = value[i].projectName;
+        const titleDiv = document.createElement('div');
+        titleDiv.className="searchThis";
+        titleDiv.innerText=projectTitle;
+
         sidebarId = document.getElementById("sidebarId");
+
+       
 
         const projectDiv = document.createElement('div');
         projectDiv.setAttribute('class', 'list-group-item list-group-item-action bg-light">Dashboard2</a>');
-        const projectIdDiv = document.createElement('div');
-        projectIdDiv.setAttribute('id', 'projectIdDiv');
-
         
+        const projectIdDiv = document.createElement('div');
+        projectIdDiv.style.display="none";
+        projectIdDiv.innerText=projectId;
 
         
         const deleteBtn = document.createElement("button");
@@ -56,18 +65,26 @@ function printProjects(){
         deleteBtn.innerText="delete";
         deleteBtn.addEventListener('click', (ev) => {
         deleteTask(ev.target)
+        ev.stopPropagation();
         });
       
     
     projectDiv.addEventListener('click', (ev) => {
-        testprint(projectId, ev.target)
+        var myNode = document.getElementById("form1");
+    while (myNode.firstChild) {
+        myNode.removeChild(myNode.firstChild);
+
+    }
+         printSavedProject(projectIdDiv.innerText, ev.target)
     });
 
-        projectDiv.append(projectTitle);
+        projectDiv.append(titleDiv);
         projectDiv.append(projectIdDiv);
         projectDiv.append(deleteBtn);
         sidebarId.append(projectDiv)
         projectId++
+
+        console.log(projectDiv)
     
  }
 });
@@ -76,15 +93,14 @@ function printProjects(){
 }
 
 
-    //for each item in project make a sidebar element with name and id
-    //then set id to none in css
 
 
-function testprint(projectId) {
-
-    makeRequest('GET', 'http://localhost:8080/ProjectAPI/api/task/get/' + projectId)
+function printSavedProject(projectId) {
+    // document.getElementById = 
+    
+    makeRequest('GET', BASE_URL + '/ProjectAPI/api/task/get/' + projectId)
         .then((value) => {
-            console.log(value);
+        
             f = document.getElementById("form1");
             for (let i = 0; i <= value.length; i++) {
 
@@ -143,7 +159,7 @@ if (password === password2)
     // userData[element.username] = element.value;
     // userData[element.id] = element.value;   
 
-    makeRequest('POST', 'http://localhost:8080/ProjectAPI/api/account/create', userData)
+    makeRequest('POST', BASE_URL + '/ProjectAPI/api/account/create', userData)
         .then((value) => {
             // const dataString = JSON.stringify(userData);
             // sessionStorage.setItem('userData', dataString);
@@ -174,7 +190,7 @@ function login() {
     const password1 = document.getElementById("password").value
     
 
-    makeRequest('GET', 'http://localhost:8080/ProjectAPI/api/account/get/' + username1)
+    makeRequest('GET', BASE_URL + '/ProjectAPI/api/account/get/' + username1)
         .then((value) => {
             console.log(value);
             console.log(value.password)
@@ -201,7 +217,7 @@ function login() {
 function displayUser(method, url, username, userId) {
     const data = sessionStorage.getItem("userData");
 
-    makeRequest('GET', 'http://localhost:8080/ProjectAPI/api/account/get/' + UserId)
+    makeRequest('GET', BASE_URL + '/ProjectAPI/api/account/get/' + UserId)
         .then((value) => {
             for (key in value) {
                 if (username == key) {
@@ -224,7 +240,7 @@ function deleteUser(method, url) {
 
     const username = document.getElementById("username")
 
-    makeRequest('DELETE', 'http://localhost:8080/ProjectAPI/api/account/delete/' + userId)
+    makeRequest('DELETE', BASE_URL + '/ProjectAPI/api/account/delete/' + userId)
         .then((value) => {
             console.log(value);
             // value.userId;
@@ -234,7 +250,7 @@ function deleteUser(method, url) {
         });
 
 
-    makeRequest('DELETE', 'http://localhost:8080/ProjectAPI/api/account/delete/' + value.userId)
+    makeRequest('DELETE', BASE_URL +'/ProjectAPI/api/account/delete/' + value.userId)
         .then((value) => {
             console.log(value);
         }).catch((error) => {
@@ -248,7 +264,7 @@ function updateUser(method, url, UserId) {
     // const username = document.getElementById("username")
     // const password = document.getElementById("password")
 
-    makeRequest('POST', 'http://localhost:8080/ProjectAPI/api/account/update/' + UserId + +username + '&password=' + password)
+    makeRequest('POST', BASE_URL + '/ProjectAPI/api/account/update/' + UserId + +username + '&password=' + password)
         .then((value) => {
             console.log(value);
         }).catch((error) => {
