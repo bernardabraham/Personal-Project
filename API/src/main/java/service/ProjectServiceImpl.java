@@ -16,8 +16,8 @@ public class ProjectServiceImpl implements ProjectService {
 		return this.repo.getAllProjects();
 	}
 	
-	public String getProject(int projectId) {
-		return this.repo.getProject(projectId);
+	public String getProject(int userId) {
+		return this.repo.getProject(userId);
 	}
 
 	public String createProject(String project, int userId) {

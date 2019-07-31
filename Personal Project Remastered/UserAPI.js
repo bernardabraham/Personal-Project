@@ -28,12 +28,65 @@ function addProjectToAPI(method, url) {
 
 }
 
-function testprint() {
-const projectId = 1;
+function printProjects(){
+    // userId = sessionStorage.getItem("usernameId");
+    const userId= 1;
+    console.log("hi");
+
+    makeRequest('GET', 'http://localhost:8080/ProjectAPI/api/project/get/' + userId)
+    .then((value) => {
+
+          for(i = 0; value.length; i++){
+        
+        projectId = value[i].projectId;
+        projectTitle = value[i].projectName;
+        sidebarId = document.getElementById("sidebarId");
+
+        const projectDiv = document.createElement('div');
+        projectDiv.setAttribute('class', 'list-group-item list-group-item-action bg-light">Dashboard2</a>');
+        const projectIdDiv = document.createElement('div');
+        projectIdDiv.setAttribute('id', 'projectIdDiv');
+
+        
+
+        
+        const deleteBtn = document.createElement("button");
+        deleteBtn.setAttribute('type', 'button');
+        deleteBtn.id="deleteButton";
+        deleteBtn.innerText="delete";
+        deleteBtn.addEventListener('click', (ev) => {
+        deleteTask(ev.target)
+        });
+      
+    
+    projectDiv.addEventListener('click', (ev) => {
+        testprint(projectId, ev.target)
+    });
+
+        projectDiv.append(projectTitle);
+        projectDiv.append(projectIdDiv);
+        projectDiv.append(deleteBtn);
+        sidebarId.append(projectDiv)
+        projectId++
+    
+ }
+});
+    
+    
+}
+
+
+    //for each item in project make a sidebar element with name and id
+    //then set id to none in css
+
+
+function testprint(projectId) {
+
     makeRequest('GET', 'http://localhost:8080/ProjectAPI/api/task/get/' + projectId)
         .then((value) => {
+            console.log(value);
             f = document.getElementById("form1");
-            for (let i = 1; i <= value.length; i++) {
+            for (let i = 0; i <= value.length; i++) {
 
                 member = value[i].taskContent;
 

@@ -20,7 +20,7 @@ public class TaskDatabase implements TaskRepository {
 	
 	@Transactional(value = TxType.SUPPORTS)
 	public String getTask(int projectId) {
-		TypedQuery<Task> query = manager.createQuery("select b from Task b where b.projectId = '" + projectId + "'", Task.class);
+		TypedQuery<Task> query = manager.createQuery("select b from Task b where b.project = '" + projectId + "'", Task.class);
 		return this.util.getJSONForObject(query.getResultList());
 	}	
 	

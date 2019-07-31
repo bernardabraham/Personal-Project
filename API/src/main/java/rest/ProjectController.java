@@ -24,9 +24,9 @@ public class ProjectController {
 	}
 	
 	@GET
-	@Path("/get/{projectId}")
-	public String getProject(@PathParam("projectId") int projectId) throws AccountNotFoundException {
-		return this.service.getProject(projectId);
+	@Path("/get/{userId}")
+	public String getProject(@PathParam("userId") int userId) throws AccountNotFoundException {
+		return this.service.getProject(userId);
 	}
 	
 	

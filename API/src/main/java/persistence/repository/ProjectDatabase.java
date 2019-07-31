@@ -27,9 +27,9 @@ public class ProjectDatabase implements ProjectRepository {
 	}
 	
 	@Transactional(value = TxType.SUPPORTS)
-	public String getProject(int projectId) {
-		TypedQuery<Project> query = manager.createQuery("select b from User b where b.projectId = '" + projectId + "'", Project.class);
-		return this.util.getJSONForObject(query.getSingleResult());
+	public String getProject(int userId) {
+		TypedQuery<Project> query = manager.createQuery("select b from Project b where b.user = '" + userId + "'", Project.class);
+		return this.util.getJSONForObject(query.getResultList());
 	}
 
 	@Transactional(value = TxType.REQUIRED)

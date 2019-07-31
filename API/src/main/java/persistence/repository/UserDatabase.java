@@ -13,17 +13,17 @@ import util.JSONUtil;
 @Default
 public class UserDatabase implements UserRepository {
 	JSONUtil util = new JSONUtil();
-	
+
 	@PersistenceContext(unitName = "primary")
 	private EntityManager manager;
-	
+
 	@Transactional(value = TxType.SUPPORTS)
 	public String getAccount(String username) {
-		TypedQuery<User> query = manager.createQuery("select b from User b where b.username = '" + username + "'", User.class);
+		TypedQuery<User> query = manager.createQuery("select b from User b where b.username = '" + username + "'",
+				User.class);
 		return this.util.getJSONForObject(query.getSingleResult());
 	}
-	
-	
+
 	@Transactional(value = TxType.SUPPORTS)
 	public String getAllAccounts() {
 		TypedQuery<User> query = manager.createQuery("select a from ProjectAccount a", User.class);
@@ -33,12 +33,13 @@ public class UserDatabase implements UserRepository {
 	@Transactional(value = TxType.REQUIRED)
 	public String createAccount(String jsonStr) {
 		User account1 = util.getObjectForJSON(jsonStr, User.class);
-		TypedQuery<User> query = manager.createQuery("select b from User b where b.username = '" + account1.getUsername() + "'", User.class);
-		if(query.getResultList().isEmpty()) {
-		manager.persist(account1);
-		return "{\"result\" : \"Success1\"}";
+		TypedQuery<User> query = manager
+				.createQuery("select b from User b where b.username = '" + account1.getUsername() + "'", User.class);
+		if (query.getResultList().isEmpty()) {
+			manager.persist(account1);
+			return "{\"result\" : \"Success1\"}";
 		} else {
-			return "Username is taken";
+			return "{\"result\" : \"Username is taken\"}";
 		}
 
 	}
@@ -59,6 +60,5 @@ public class UserDatabase implements UserRepository {
 		manager.persist(existing);
 		return "Success";
 	}
-
 
 }

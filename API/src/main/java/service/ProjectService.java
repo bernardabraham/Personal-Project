@@ -6,7 +6,7 @@ import javax.security.auth.login.AccountNotFoundException;
 public interface ProjectService {
 	String getAllProjects();
 	
-	String getProject(int projectId);
+	String getProject(int userId);
 
 	String createProject(String project, int userId);
 
