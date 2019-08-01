@@ -56,8 +56,8 @@ public class UserDatabase implements UserRepository {
 		User newAccount = util.getObjectForJSON(account, User.class);
 		User existing = this.manager.find(User.class, id);
 		existing.setUsername(newAccount.getUsername());
-		existing.setPassword(newAccount.getUsername());
-		existing.setEmail(newAccount.getUsername());
+		existing.setPassword(newAccount.getPassword());
+		existing.setEmail(newAccount.getEmail());
 		manager.persist(existing);
 		return "{\"result\" : \"Success1\"}";
 	}

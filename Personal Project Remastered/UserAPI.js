@@ -1,109 +1,76 @@
-// const BASE_URL = 'http://35.246.10.215:8081';
-// const BASE_URL = 'http://localhost:8080';
 
-
-function addProjectToAPI(method, url) {
-    let projectData = {};
-
-    var myNode = document.getElementById("form1");
-    console.log(myNode)
-
-    while (myNode.firstChild) {
-
-        //add the node to userdata
-        value = myNode.removeChild(myNode.firstChild);
-        projectData.keyi = value;
-
-    }
-
-    // userData[element.username] = element.value;
-    // userData[element.id] = element.value;   
-
-    makeRequest('POST', BASE_URL + '/ProjectAPI/api/account/addProject', userData)
-        .then((value) => {
-            // const dataString = JSON.stringify(userData);
-            // sessionStorage.setItem('userData', dataString);
-            console.log("successfully registered");
-            window.location = 'Login.html'
-            console.log(value);
-        }).catch((error) => {
-            console.warn(error);
-        });
-
-}
-
-function printProjects(){
-    // userId = sessionStorage.getItem("usernameId");
-    const userId= 1;
+function printProjects() { //on page startup
+    userId = sessionStorage.getItem("usernameId");
 
     makeRequest('GET', BASE_URL + '/ProjectAPI/api/project/get/' + userId)
-    .then((value) => {
+        .then((value) => {
 
-          for(i = 0; i<=value.length-1; i++){
-        
-        projectId = value[i].projectId;
-        projectTitle = value[i].projectName;
-        const titleDiv = document.createElement('div');
-        titleDiv.className="searchThis";
-        titleDiv.innerText=projectTitle;
+            for (i = 0; i <= value.length - 1; i++) {
+                sidebarId = document.getElementById("sidebarId");
+                
 
-        sidebarId = document.getElementById("sidebarId");
+                // createProjectDiv()
+                projectId = value[i].projectId;
+                projectTitle = value[i].projectName;
 
-       
 
-        const projectDiv = document.createElement('div');
-        projectDiv.setAttribute('class', 'list-group-item list-group-item-action bg-light">Dashboard2</a>');
-        
-        const projectIdDiv = document.createElement('div');
-        projectIdDiv.style.display="none";
-        projectIdDiv.innerText=projectId;
+                const titleDiv = document.createElement('div');
+                titleDiv.className = "searchThis";
+                titleDiv.innerText = projectTitle;
 
-        
-        const deleteBtn = document.createElement("button");
-        deleteBtn.setAttribute('type', 'button');
-        deleteBtn.id="deleteButton";
-        deleteBtn.innerText="delete";
-        deleteBtn.addEventListener('click', (ev) => {
-        deleteTask(ev.target)
-        ev.stopPropagation();
+
+
+
+                const projectDiv = document.createElement('div');
+                projectDiv.setAttribute('class', 'list-group-item list-group-item-action bg-light">Dashboard2</a>');
+
+                const projectIdDiv = document.createElement('div');
+                projectIdDiv.style.display = "none";
+                projectIdDiv.innerText = projectId;
+
+
+                const deleteBtn = document.createElement("button");
+                deleteBtn.setAttribute('type', 'button');
+                deleteBtn.id = "deleteButton";
+                deleteBtn.innerText = "delete";
+                deleteBtn.addEventListener('click', (ev) => {
+                    deleteTask(ev.target)
+                    ev.stopPropagation();
+                });
+
+
+                projectDiv.addEventListener('click', (ev) => {
+                    var myNode = document.getElementById("form1");
+                    while (myNode.firstChild) {
+                        myNode.removeChild(myNode.firstChild);
+
+                    }
+                    printSavedProject(projectIdDiv.innerText, ev.target)
+            
+                });
+
+                projectDiv.append(titleDiv);
+                projectDiv.append(projectIdDiv);
+                projectDiv.append(deleteBtn);
+                sidebarId.append(projectDiv)
+
+            }
         });
-      
-    
-    projectDiv.addEventListener('click', (ev) => {
-        var myNode = document.getElementById("form1");
-    while (myNode.firstChild) {
-        myNode.removeChild(myNode.firstChild);
 
-    }
-         printSavedProject(projectIdDiv.innerText, ev.target)
-    });
 
-        projectDiv.append(titleDiv);
-        projectDiv.append(projectIdDiv);
-        projectDiv.append(deleteBtn);
-        sidebarId.append(projectDiv)
-        projectId++
-
-        console.log(projectDiv)
-    
- }
-});
-    
-    
 }
 
 
+function printSavedProject(projectId) { //on click
 
+//project id is the same as the div 
 
-function printSavedProject(projectId) {
-    // document.getElementById = 
-    
     makeRequest('GET', BASE_URL + '/ProjectAPI/api/task/get/' + projectId)
         .then((value) => {
-        
+
             f = document.getElementById("form1");
             for (let i = 0; i <= value.length; i++) {
-
+                console.log(value[i].taskContent);
                 member = value[i].taskContent;
 
                 const childPara = document.createElement('p');
@@ -144,7 +111,7 @@ function printSavedProject(projectId) {
 
 
 
-function registerUser(method, url) {
+function registerUser() {
     const username = document.getElementById("username").value;
     const password = document.getElementById("password").value;
     const password2 = document.getElementById("password2").value;
@@ -152,30 +119,27 @@ function registerUser(method, url) {
 
     console.log(password);
     console.log(password2);
-if (password === password2)
-    if (password === password2){
-    const userData = { 'username': username, 'password': password, 'email': email }
-    console.log(userData);
-    // userData[element.username] = element.value;
-    // userData[element.id] = element.value;   
+    if (password === password2)
+        if (password === password2) {
+            const userData = { 'username': username, 'password': password, 'email': email }
+            console.log(userData);
 
-    makeRequest('POST', BASE_URL + '/ProjectAPI/api/account/create', userData)
-        .then((value) => {
-            // const dataString = JSON.stringify(userData);
-            // sessionStorage.setItem('userData', dataString);
-            window.location = 'Login.html';
-            console.log("successfully registered");
-            console.log(value);
-        }).catch((error) => {
-            console.warn(error);
+
+            makeRequest('POST', BASE_URL + '/ProjectAPI/api/account/create', userData)
+                .then((value) => {
+                    window.location = 'Login.html';
+                    console.log("successfully registered");
+                    console.log(value);
+                }).catch((error) => {
+                    console.warn(error);
+                    div = document.getElementById("register1");
+                    div.style.display = "block";
+                });
+        }
+        else {
             div = document.getElementById("register1");
-            div.style.display="block";
-        });
-    }
-    else{
-        div = document.getElementById("register1");
-        div.style.display="block";
-    }
+            div.style.display = "block";
+        }
     return false;
 }
 
@@ -183,12 +147,12 @@ if (password === password2)
 function login() {
     if (document.getElementById("username").value === "" || document.getElementById("password").value === "") {
         div = document.getElementById("register1");
-        div.style.display="block";
+        div.style.display = "block";
         return;
     }
     const username1 = document.getElementById("username").value
     const password1 = document.getElementById("password").value
-    
+
 
     makeRequest('GET', BASE_URL + '/ProjectAPI/api/account/get/' + username1)
         .then((value) => {
@@ -197,7 +161,7 @@ function login() {
             if (value.password === password1) {
                 sessionStorage.setItem('usernameId', value.userId);
                 window.location = '../Main.html'
-                
+
             } else {
                 console.log("fail");
 
@@ -206,39 +170,19 @@ function login() {
 
         }).catch((error) => {
             div = document.getElementById("register1");
-            div.style.display="block";
+            div.style.display = "block";
             console.warn(error);
             console.log("hi");
-            
+
         });
-        return false;
+    return false;
 }
 
-function displayUser(method, url, username, userId) {
-    const data = sessionStorage.getItem("userData");
 
-    makeRequest('GET', BASE_URL + '/ProjectAPI/api/account/get/' + UserId)
-        .then((value) => {
-            for (key in value) {
-                if (username == key) {
-                    document.getElementById("username").value = key;
-                    document.getElementById("password").value = key.password;
-                    document.getElementById("firstName").value = key.firstName;
-                    document.getElementById("lastName").value = key.lastName;
-                    break;
-                }
-            }
-            console.log(value);
-        }).catch((error) => {
-            console.warn(error);
-        });
-    console.log(value);
+function deleteUser() {
 
-}
-
-function deleteUser(method, url) {
-
-    const username = document.getElementById("username")
+    userId = sessionStorage.getItem("usernameId");
+    console.log(userId);
 
     makeRequest('DELETE', BASE_URL + '/ProjectAPI/api/account/delete/' + userId)
         .then((value) => {
@@ -249,30 +193,43 @@ function deleteUser(method, url) {
             console.warn(error);
         });
 
-
-    makeRequest('DELETE', BASE_URL +'/ProjectAPI/api/account/delete/' + value.userId)
-        .then((value) => {
-            console.log(value);
-        }).catch((error) => {
-            console.warn(error);
-        });
 }
 
 
+function updateUser() {
+    userId = sessionStorage.getItem("usernameId");
+    div = document.getElementById("updated");
+    div.style.display = "block";
 
-function updateUser(method, url, UserId) {
-    // const username = document.getElementById("username")
-    // const password = document.getElementById("password")
+    const username1 = document.getElementById("username").value;
+    const password1 = document.getElementById("password").value;
+    const password2 = document.getElementById("password2").value;
+    const email1 = document.getElementById("email").value;
+    if (username1 === "" || password1 === "" || password2 === "" || email1 === "") {
+        div = document.getElementById("updated");
+        div.style.display = "block";
+        return false;
+    }
 
-    makeRequest('POST', BASE_URL + '/ProjectAPI/api/account/update/' + UserId + +username + '&password=' + password)
+    if (password1 != password2) {
+        div = document.getElementById("updated");
+        div.style.display = "block";
+        return false;
+    }
+    userData = { 'username': username1, 'password': password1, 'email': email1 }
+
+    makeRequest('POST', BASE_URL + '/ProjectAPI/api/account/update/' + userId, userData)
         .then((value) => {
             console.log(value);
+
+            div.append.innerHTML += 'successfully updated';
+
         }).catch((error) => {
             console.warn(error);
+            div = document.getElementById("updated");
+            div.style.display = "block";
         });
-    console.log(input);
 
-    // window.location = 'login.html';
+    return false;
 
-    return;
 }

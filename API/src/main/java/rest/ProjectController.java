@@ -29,6 +29,12 @@ public class ProjectController {
 		return this.service.getProject(userId);
 	}
 	
+	@GET
+	@Path("/getMax/{userId}")
+	public String getMaxProjectId(@PathParam("userId") int userId) throws AccountNotFoundException {
+		return this.service.getMaxProjectId(userId);
+	}
+	
 	
 	@POST
 	@Path("/create/{userId}")

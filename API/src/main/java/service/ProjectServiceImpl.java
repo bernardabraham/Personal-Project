@@ -19,6 +19,10 @@ public class ProjectServiceImpl implements ProjectService {
 	public String getProject(int userId) {
 		return this.repo.getProject(userId);
 	}
+	
+	public String getMaxProjectId(int userId) {
+		return this.repo.getMaxProjectId(userId);
+	}
 
 	public String createProject(String project, int userId) {
 		return this.repo.createProject(project, userId);

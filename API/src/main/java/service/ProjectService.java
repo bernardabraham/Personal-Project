@@ -7,7 +7,9 @@ public interface ProjectService {
 	String getAllProjects();
 	
 	String getProject(int userId);
-
+	
+	String getMaxProjectId(int userId);
+	
 	String createProject(String project, int userId);
 
 	String deleteProject(int projectId) throws AccountNotFoundException;

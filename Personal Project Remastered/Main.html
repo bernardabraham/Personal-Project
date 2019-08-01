@@ -59,6 +59,7 @@
               <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                 <a class="dropdown-item" href="Login/Login.html">Login</a>
                 <a class="dropdown-item" href="Login/Register.html">Register</a>
+                <a class="dropdown-item" onclick="return signOut()">Sign Out</a>
                 <div class="dropdown-divider"></div>
                 <a class="dropdown-item" href="Login/Settings.html">Settings</a>
               </div>
@@ -86,7 +87,6 @@
           
           
           <button class="button" id="submit2" onclick = "return appendProject()" >Save Project</button>
-          <button class="button" id="submit2" onclick = "return printSavedProject()" >print saved project</button>
           <br>
           <label id = "progress1"> </label>
           <progress id = "progressBar" value="0" max="100"> </progress> 

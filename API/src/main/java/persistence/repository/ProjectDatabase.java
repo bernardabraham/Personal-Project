@@ -56,5 +56,9 @@ public class ProjectDatabase implements ProjectRepository {
 		manager.persist(existing);
 		return "{\"result\" : \"Success1\"}";
 	}
-
+	@Transactional(value = TxType.SUPPORTS)
+	public String getMaxProjectId(int userId) {
+		TypedQuery<Integer> query = manager.createQuery("select max(a.projectId) from Project a", Integer.class);
+		return this.util.getJSONForObject(query.getSingleResult());
+	}
 }

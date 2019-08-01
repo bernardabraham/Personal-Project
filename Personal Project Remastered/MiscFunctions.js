@@ -13,7 +13,7 @@ function runScript(e) {
 }
 
 function runScript2(e) {
-    if (e.keyCode == 13) {  
+    if (e.keyCode == 13) {
         document.getElementById("submit2").click();
         return false;
     }
@@ -31,6 +31,10 @@ function strikeThrough() {
     var ele = document.getElementByClassName("task1");
     ele.style.setProperty("text-decoration", "line-through");
 
+}
+function signOut() {
+    sessionStorage.setItem('usernameId', 0);
+    window.location = 'Main.html';
 }
 
 function goToSettings(method, url, username) {
