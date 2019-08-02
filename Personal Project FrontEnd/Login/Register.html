@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="favicon.ico">
+
+    <title>Register</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="signin.css" rel="stylesheet">
+  </head>
+
+  <body>
+
+      <a href="../Main.html"> Home</a>
+
+    <div class="container">
+
+      <form class="form-signin">
+        <h2 class="form-signin-heading">Register Here</h2>
+        <label for="username" class="sr-only">Username</label>
+        <input type="text" id="username" class="form-control" placeholder="Username" required autofocus>
+        <label for="password" class="sr-only">Password</label>
+        <input type="password" id="password" class="form-control" placeholder="Password" required>
+        <label for="password2" class="sr-only">Confirm Password</label>
+        <input type="password" id="password2" class="form-control" placeholder="Confirm Password" required>
+        <label for="inputEmail" class="sr-only">Email</label>
+        <input type="email" id="email" class="form-control" placeholder="Email" required autofocus>
+        
+        <button class="btn btn-lg btn-primary btn-block" type="submit" onclick="return registerUser()">Register</button>
+        <p >Already a member? Login <a href="Login.html"> here</a></p>
+        <p id = "register1">Please input correct details</p>
+        
+      </form>
+
+    </div> <!-- /container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="ie10-viewport-bug-workaround.js"></script>
+    <script src="../jsonPromise.js"></script>
+    <script src="../UserAPI.js"></script>
+    <script src="../MiscFunctions.js"></script>
+    <script src="../SearchAddDelete.js"></script>
+  </body>
+</html>

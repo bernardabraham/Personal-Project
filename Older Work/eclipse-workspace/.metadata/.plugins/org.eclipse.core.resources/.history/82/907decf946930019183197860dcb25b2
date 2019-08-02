@@ -1,7 +1,0 @@
-package com.qa.Doggo;
-
-import junit.framework.TestCase;
-
-public class AppTest extends TestCase {
-
-}

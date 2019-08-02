@@ -1,0 +1,129 @@
+
+.wrapper{
+    height: 95vh;
+   width: 95vw;
+   margin: 1rem auto;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+
+}
+.invisibleId{
+  display: none;
+}
+
+#parent{
+    border: 3px solid black;
+    grid-column: 2/6;
+    
+}
+
+.user-webkit-transform{
+  position: relative
+  translateX(100px);
+}
+
+progress::-webkit-progress-value{
+ background: grey;
+  /* color: #888; 
+  height:10px;
+  width:75%; */
+}
+
+#progressBar {
+  appearance: none;
+  -webkit-appearance: none; 
+}
+#progressBar::-webkit-progress-bar {
+  appearance: none;
+  -webkit-appearance: none;
+  background: white;
+  /* color: orange; */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25) inset
+} 
+/* Handle on hover */
+
+
+.button{
+    background-color: #444;
+    border: none;
+    color: white;
+    padding: 5px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+}
+.button:hover{
+    background-color:#888;
+}
+
+#submit2{
+  position:relative;
+  top: 600px;
+
+}
+
+#deleteButton{
+  background-color: #444;
+  border: none;
+  color: white;
+  padding: 5px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+}
+#deleteButton:hover{
+  background-color:#888;
+}
+#tickbox{
+    height: 20px;
+    width: 20px;
+
+}
+/* #searchHeader {
+    position: absolute;
+    top: 100px;
+    left: 20;
+    right: 50%;
+  } */
+
+  #search1 {
+    top: 100px;
+    left: 200;
+  }
+
+#sidebar{
+
+    
+    border: 3px solid black;
+    
+    height: 95vh;
+    grid-column: 1/2;
+    overflow: scroll; 
+    overflow-x:hidden;
+    background: #f1f1f1;
+    
+}
+  
+  /* Handle on hover */
+  #sidebar::-webkit-scrollbar {
+    width: 5px;
+  }
+  /* Track */
+  #sidebar::-webkit-scrollbar-track {
+    background: #888; 
+  }
+   
+  /* Handle */
+  #sidebar::-webkit-scrollbar-thumb {
+    background: #222;; 
+  }
+  
+  /* Handle on hover */
+  #sidebar::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+  }

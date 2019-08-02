@@ -1,8 +1,0 @@
-package hello2;
-
-public class hi {
-	
-	public void first(String message) {
-		System.out.println(message);
-	}
-}

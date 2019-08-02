@@ -1,7 +1,0 @@
-package division;
-
-public class App {
-	
-
-
-}
