@@ -1,0 +1,275 @@
+2019-07-17 15:08:10,619 INFO  [org.jboss.modules] (main) JBoss Modules version 1.5.2.Final
+2019-07-17 15:08:13,748 INFO  [org.jboss.msc] (main) JBoss MSC version 1.2.6.Final
+2019-07-17 15:08:13,811 INFO  [org.jboss.as] (MSC service thread 1-7) WFLYSRV0049: WildFly Full 10.1.0.Final (WildFly Core 2.2.0.Final) starting
+2019-07-17 15:08:13,811 DEBUG [org.jboss.as.config] (MSC service thread 1-7) Configured system properties:
+	awt.toolkit = sun.awt.windows.WToolkit
+	file.encoding = Cp1252
+	file.encoding.pkg = sun.io
+	file.separator = \
+	java.awt.graphicsenv = sun.awt.Win32GraphicsEnvironment
+	java.awt.printerjob = sun.awt.windows.WPrinterJob
+	java.class.path = C:\Users\Admin\Desktop\wildfly-10.1.0.Final\jboss-modules.jar
+	java.class.version = 52.0
+	java.endorsed.dirs = C:\Program Files\Java\jdk1.8.0_144\jre\lib\endorsed
+	java.ext.dirs = C:\Program Files\Java\jdk1.8.0_144\jre\lib\ext;C:\Windows\Sun\Java\lib\ext
+	java.home = C:\Program Files\Java\jdk1.8.0_144\jre
+	java.io.tmpdir = C:\Users\Admin\AppData\Local\Temp\
+	java.library.path = C:\Program Files\Java\jdk1.8.0_144\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\ProgramData\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\MySQL\MySQL Fabric 1.5 & MySQL Utilities 1.5\;C:\Program Files (x86)\MySQL\MySQL Fabric 1.5 & MySQL Utilities 1.5\Doctrine extensions for PHP\;C:\Program Files\Java\jdk1.8.0_144\bin;C:\Program Files\Git\cmd;C:\LocalInstall\DevOps\Maven\apache-maven-3.3.9/bin;;C:\Users\Admin\AppData\Local\Programs\Microsoft VS Code\bin;.
+	java.net.preferIPv4Stack = true
+	java.runtime.name = Java(TM) SE Runtime Environment
+	java.runtime.version = 1.8.0_144-b01
+	java.specification.name = Java Platform API Specification
+	java.specification.vendor = Oracle Corporation
+	java.specification.version = 1.8
+	java.util.logging.manager = org.jboss.logmanager.LogManager
+	java.vendor = Oracle Corporation
+	java.vendor.url = http://java.oracle.com/
+	java.vendor.url.bug = http://bugreport.sun.com/bugreport/
+	java.version = 1.8.0_144
+	java.vm.info = mixed mode
+	java.vm.name = Java HotSpot(TM) 64-Bit Server VM
+	java.vm.specification.name = Java Virtual Machine Specification
+	java.vm.specification.vendor = Oracle Corporation
+	java.vm.specification.version = 1.8
+	java.vm.vendor = Oracle Corporation
+	java.vm.version = 25.144-b01
+	javax.management.builder.initial = org.jboss.as.jmx.PluggableMBeanServerBuilder
+	javax.xml.datatype.DatatypeFactory = __redirected.__DatatypeFactory
+	javax.xml.parsers.DocumentBuilderFactory = __redirected.__DocumentBuilderFactory
+	javax.xml.parsers.SAXParserFactory = __redirected.__SAXParserFactory
+	javax.xml.stream.XMLEventFactory = __redirected.__XMLEventFactory
+	javax.xml.stream.XMLInputFactory = __redirected.__XMLInputFactory
+	javax.xml.stream.XMLOutputFactory = __redirected.__XMLOutputFactory
+	javax.xml.transform.TransformerFactory = __redirected.__TransformerFactory
+	javax.xml.validation.SchemaFactory:http://www.w3.org/2001/XMLSchema = __redirected.__SchemaFactory
+	javax.xml.xpath.XPathFactory:http://java.sun.com/jaxp/xpath/dom = __redirected.__XPathFactory
+	jboss.home.dir = C:\Users\Admin\Desktop\wildfly-10.1.0.Final
+	jboss.host.name = student04
+	jboss.modules.dir = C:\Users\Admin\Desktop\wildfly-10.1.0.Final\modules
+	jboss.modules.system.pkgs = org.jboss.byteman
+	jboss.node.name = student04
+	jboss.qualified.host.name = student04
+	jboss.server.base.dir = C:\Users\Admin\Desktop\wildfly-10.1.0.Final\standalone
+	jboss.server.config.dir = C:\Users\Admin\Desktop\wildfly-10.1.0.Final\standalone\configuration
+	jboss.server.data.dir = C:\Users\Admin\Desktop\wildfly-10.1.0.Final\standalone\data
+	jboss.server.deploy.dir = C:\Users\Admin\Desktop\wildfly-10.1.0.Final\standalone\data\content
+	jboss.server.log.dir = C:\Users\Admin\Desktop\wildfly-10.1.0.Final\standalone\log
+	jboss.server.name = student04
+	jboss.server.persist.config = true
+	jboss.server.temp.dir = C:\Users\Admin\Desktop\wildfly-10.1.0.Final\standalone\tmp
+	line.separator = 
+
+	logging.configuration = file:C:\Users\Admin\Desktop\wildfly-10.1.0.Final\standalone\configuration/logging.properties
+	module.path = C:\Users\Admin\Desktop\wildfly-10.1.0.Final\modules
+	org.jboss.boot.log.file = C:\Users\Admin\Desktop\wildfly-10.1.0.Final\standalone\log\server.log
+	org.jboss.resolver.warning = true
+	org.xml.sax.driver = __redirected.__XMLReaderFactory
+	os.arch = amd64
+	os.name = Windows 10
+	os.version = 10.0
+	path.separator = ;
+	program.name = standalone.bat
+	sun.arch.data.model = 64
+	sun.boot.class.path = C:\Program Files\Java\jdk1.8.0_144\jre\lib\resources.jar;C:\Program Files\Java\jdk1.8.0_144\jre\lib\rt.jar;C:\Program Files\Java\jdk1.8.0_144\jre\lib\sunrsasign.jar;C:\Program Files\Java\jdk1.8.0_144\jre\lib\jsse.jar;C:\Program Files\Java\jdk1.8.0_144\jre\lib\jce.jar;C:\Program Files\Java\jdk1.8.0_144\jre\lib\charsets.jar;C:\Program Files\Java\jdk1.8.0_144\jre\lib\jfr.jar;C:\Program Files\Java\jdk1.8.0_144\jre\classes
+	sun.boot.library.path = C:\Program Files\Java\jdk1.8.0_144\jre\bin
+	sun.cpu.endian = little
+	sun.cpu.isalist = amd64
+	sun.desktop = windows
+	sun.io.unicode.encoding = UnicodeLittle
+	sun.java.command = C:\Users\Admin\Desktop\wildfly-10.1.0.Final\jboss-modules.jar -mp C:\Users\Admin\Desktop\wildfly-10.1.0.Final\modules org.jboss.as.standalone -Djboss.home.dir=C:\Users\Admin\Desktop\wildfly-10.1.0.Final
+	sun.java.launcher = SUN_STANDARD
+	sun.jnu.encoding = Cp1252
+	sun.management.compiler = HotSpot 64-Bit Tiered Compilers
+	sun.os.patch.level = 
+	sun.stderr.encoding = cp850
+	sun.stdout.encoding = cp850
+	user.country = GB
+	user.dir = C:\Users\Admin\Desktop\wildfly-10.1.0.Final\bin
+	user.home = C:\Users\Admin
+	user.language = en
+	user.name = Admin
+	user.script = 
+	user.timezone = Europe/London
+	user.variant = 
+2019-07-17 15:08:13,811 DEBUG [org.jboss.as.config] (MSC service thread 1-7) VM Arguments: -Dprogram.name=standalone.bat -Xms64M -Xmx512M -XX:MetaspaceSize=96M -XX:MaxMetaspaceSize=256m -Djava.net.preferIPv4Stack=true -Djboss.modules.system.pkgs=org.jboss.byteman -Dorg.jboss.boot.log.file=C:\Users\Admin\Desktop\wildfly-10.1.0.Final\standalone\log\server.log -Dlogging.configuration=file:C:\Users\Admin\Desktop\wildfly-10.1.0.Final\standalone\configuration/logging.properties 
+2019-07-17 15:08:26,457 INFO  [org.jboss.as.server] (Controller Boot Thread) WFLYSRV0039: Creating http management service using socket-binding (management-http)
+2019-07-17 15:08:26,472 INFO  [org.xnio] (MSC service thread 1-1) XNIO version 3.4.0.Final
+2019-07-17 15:08:26,472 INFO  [org.xnio.nio] (MSC service thread 1-1) XNIO NIO Implementation Version 3.4.0.Final
+2019-07-17 15:08:26,488 INFO  [org.jboss.as.clustering.infinispan] (ServerService Thread Pool -- 38) WFLYCLINF0001: Activating Infinispan subsystem.
+2019-07-17 15:08:26,504 INFO  [org.jboss.as.naming] (ServerService Thread Pool -- 46) WFLYNAM0001: Activating Naming Subsystem
+2019-07-17 15:08:26,504 WARN  [org.jboss.as.txn] (ServerService Thread Pool -- 54) WFLYTX0013: Node identifier property is set to the default value. Please make sure it is unique.
+2019-07-17 15:08:26,504 INFO  [org.jboss.as.security] (ServerService Thread Pool -- 53) WFLYSEC0002: Activating Security Subsystem
+2019-07-17 15:08:26,504 INFO  [org.jboss.as.webservices] (ServerService Thread Pool -- 56) WFLYWS0002: Activating WebServices Extension
+2019-07-17 15:08:26,542 INFO  [org.jboss.as.security] (MSC service thread 1-2) WFLYSEC0001: Current PicketBox version=4.9.6.Final
+2019-07-17 15:08:26,545 INFO  [org.wildfly.extension.io] (ServerService Thread Pool -- 37) WFLYIO001: Worker 'default' has auto-configured to 8 core threads with 64 task threads based on your 4 available processors
+2019-07-17 15:08:26,548 INFO  [org.jboss.as.connector] (MSC service thread 1-7) WFLYJCA0009: Starting JCA Subsystem (WildFly/IronJacamar 1.3.4.Final)
+2019-07-17 15:08:26,549 INFO  [org.jboss.as.jsf] (ServerService Thread Pool -- 44) WFLYJSF0007: Activated the following JSF Implementations: [main]
+2019-07-17 15:08:26,575 INFO  [org.jboss.as.naming] (MSC service thread 1-2) WFLYNAM0003: Starting Naming Service
+2019-07-17 15:08:26,576 INFO  [org.jboss.as.mail.extension] (MSC service thread 1-5) WFLYMAIL0001: Bound mail session [java:jboss/mail/Default]
+2019-07-17 15:08:26,585 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-6) WFLYUT0003: Undertow 1.4.0.Final starting
+2019-07-17 15:08:26,661 INFO  [org.jboss.as.connector.subsystems.datasources] (ServerService Thread Pool -- 33) WFLYJCA0004: Deploying JDBC-compliant driver class org.h2.Driver (version 1.3)
+2019-07-17 15:08:26,703 INFO  [org.jboss.remoting] (MSC service thread 1-6) JBoss Remoting version 4.0.21.Final
+2019-07-17 15:08:26,699 INFO  [org.jboss.as.connector.deployers.jdbc] (MSC service thread 1-1) WFLYJCA0018: Started Driver service with driver-name = h2
+2019-07-17 15:08:26,745 INFO  [org.jboss.as.ejb3] (MSC service thread 1-2) WFLYEJB0481: Strict pool slsb-strict-max-pool is using a max instance size of 64 (per class), which is derived from thread worker pool sizing.
+2019-07-17 15:08:26,745 INFO  [org.jboss.as.ejb3] (MSC service thread 1-4) WFLYEJB0482: Strict pool mdb-strict-max-pool is using a max instance size of 16 (per class), which is derived from the number of CPUs on this host.
+2019-07-17 15:08:26,912 INFO  [org.jboss.as.connector.subsystems.datasources] (MSC service thread 1-6) WFLYJCA0001: Bound data source [java:jboss/datasources/ExampleDS]
+2019-07-17 15:08:26,944 INFO  [org.wildfly.extension.undertow] (ServerService Thread Pool -- 55) WFLYUT0014: Creating file handler for path 'C:\Users\Admin\Desktop\wildfly-10.1.0.Final/welcome-content' with options [directory-listing: 'false', follow-symlink: 'false', case-sensitive: 'true', safe-symlink-paths: '[]']
+2019-07-17 15:08:26,975 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-1) WFLYUT0012: Started server default-server.
+2019-07-17 15:08:27,037 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-4) WFLYUT0018: Host default-host starting
+2019-07-17 15:08:27,053 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-6) WFLYUT0006: Undertow HTTP listener default listening on 127.0.0.1:8080
+2019-07-17 15:08:27,834 WARN  [org.jboss.as.domain.management.security] (MSC service thread 1-6) WFLYDM0111: Keystore C:\Users\Admin\Desktop\wildfly-10.1.0.Final\standalone\configuration\application.keystore not found, it will be auto generated on first use with a self signed certificate for host localhost
+2019-07-17 15:08:27,928 INFO  [org.infinispan.factories.GlobalComponentRegistry] (MSC service thread 1-6) ISPN000128: Infinispan version: Infinispan 'Chakra' 8.2.4.Final
+2019-07-17 15:08:27,928 INFO  [org.jboss.as.server.deployment.scanner] (MSC service thread 1-7) WFLYDS0013: Started FileSystemDeploymentService for directory C:\Users\Admin\Desktop\wildfly-10.1.0.Final\standalone\deployments
+2019-07-17 15:08:27,959 INFO  [org.infinispan.configuration.cache.EvictionConfigurationBuilder] (ServerService Thread Pool -- 61) ISPN000152: Passivation configured without an eviction policy being selected. Only manually evicted entities will be passivated.
+2019-07-17 15:08:27,959 INFO  [org.infinispan.configuration.cache.EvictionConfigurationBuilder] (ServerService Thread Pool -- 59) ISPN000152: Passivation configured without an eviction policy being selected. Only manually evicted entities will be passivated.
+2019-07-17 15:08:27,959 INFO  [org.infinispan.configuration.cache.EvictionConfigurationBuilder] (ServerService Thread Pool -- 63) ISPN000152: Passivation configured without an eviction policy being selected. Only manually evicted entities will be passivated.
+2019-07-17 15:08:27,975 INFO  [org.infinispan.configuration.cache.EvictionConfigurationBuilder] (ServerService Thread Pool -- 63) ISPN000152: Passivation configured without an eviction policy being selected. Only manually evicted entities will be passivated.
+2019-07-17 15:08:27,975 INFO  [org.infinispan.configuration.cache.EvictionConfigurationBuilder] (ServerService Thread Pool -- 61) ISPN000152: Passivation configured without an eviction policy being selected. Only manually evicted entities will be passivated.
+2019-07-17 15:08:27,992 INFO  [org.infinispan.configuration.cache.EvictionConfigurationBuilder] (ServerService Thread Pool -- 59) ISPN000152: Passivation configured without an eviction policy being selected. Only manually evicted entities will be passivated.
+2019-07-17 15:08:28,080 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-7) WFLYUT0006: Undertow HTTPS listener https listening on 127.0.0.1:8443
+2019-07-17 15:08:30,392 INFO  [org.jboss.ws.common.management] (MSC service thread 1-3) JBWS022052: Starting JBossWS 5.1.5.Final (Apache CXF 3.1.6) 
+2019-07-17 15:08:30,470 INFO  [org.jboss.as] (Controller Boot Thread) WFLYSRV0060: Http management interface listening on http://127.0.0.1:9990/management
+2019-07-17 15:08:30,470 INFO  [org.jboss.as] (Controller Boot Thread) WFLYSRV0051: Admin console listening on http://127.0.0.1:9990
+2019-07-17 15:08:30,470 INFO  [org.jboss.as] (Controller Boot Thread) WFLYSRV0025: WildFly Full 10.1.0.Final (WildFly Core 2.2.0.Final) started in 21963ms - Started 331 of 577 services (393 services are lazy, passive or on-demand)
+2019-07-17 15:10:38,262 INFO  [org.jboss.as.repository] (DeploymentScanner-threads - 2) WFLYDR0001: Content added at location C:\Users\Admin\Desktop\wildfly-10.1.0.Final\standalone\data\content\08\0c5a481cd7abf27bfd4b48edf73b1cb214085e\content
+2019-07-17 15:10:38,278 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-6) WFLYSRV0027: Starting deployment of "h2console.war" (runtime-name: "h2console.war")
+2019-07-17 15:10:40,559 INFO  [org.wildfly.extension.undertow] (ServerService Thread Pool -- 73) WFLYUT0021: Registered web context: /h2console
+2019-07-17 15:10:40,606 INFO  [org.jboss.as.server] (DeploymentScanner-threads - 2) WFLYSRV0010: Deployed "h2console.war" (runtime-name : "h2console.war")
+2019-07-17 15:24:32,971 INFO  [org.jboss.as.repository] (DeploymentScanner-threads - 1) WFLYDR0001: Content added at location C:\Users\Admin\Desktop\wildfly-10.1.0.Final\standalone\data\content\7c\7ae24ee33d73d022ae14236881fb3f18bb7ca1\content
+2019-07-17 15:24:32,986 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-3) WFLYSRV0027: Starting deployment of "AccountSETemplate-0.0.1-SNAPSHOT.war" (runtime-name: "AccountSETemplate-0.0.1-SNAPSHOT.war")
+2019-07-17 15:24:36,365 INFO  [org.jboss.as.jpa] (MSC service thread 1-6) WFLYJPA0002: Read persistence.xml for primary
+2019-07-17 15:24:36,409 INFO  [org.jboss.as.jpa] (ServerService Thread Pool -- 74) WFLYJPA0010: Starting Persistence Unit (phase 1 of 2) Service 'AccountSETemplate-0.0.1-SNAPSHOT.war#primary'
+2019-07-17 15:24:36,427 INFO  [org.hibernate.jpa.internal.util.LogHelper] (ServerService Thread Pool -- 74) HHH000204: Processing PersistenceUnitInfo [
+	name: primary
+	...]
+2019-07-17 15:24:36,475 INFO  [org.hibernate.Version] (ServerService Thread Pool -- 74) HHH000412: Hibernate Core {5.0.10.Final}
+2019-07-17 15:24:36,476 INFO  [org.hibernate.cfg.Environment] (ServerService Thread Pool -- 74) HHH000206: hibernate.properties not found
+2019-07-17 15:24:36,478 INFO  [org.hibernate.cfg.Environment] (ServerService Thread Pool -- 74) HHH000021: Bytecode provider name : javassist
+2019-07-17 15:24:36,500 INFO  [org.hibernate.annotations.common.Version] (ServerService Thread Pool -- 74) HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2019-07-17 15:24:36,529 INFO  [org.jboss.as.jpa] (ServerService Thread Pool -- 74) WFLYJPA0010: Starting Persistence Unit (phase 2 of 2) Service 'AccountSETemplate-0.0.1-SNAPSHOT.war#primary'
+2019-07-17 15:24:36,563 INFO  [org.hibernate.dialect.Dialect] (ServerService Thread Pool -- 74) HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2019-07-17 15:24:36,567 WARN  [org.hibernate.dialect.H2Dialect] (ServerService Thread Pool -- 74) HHH000431: Unable to determine H2 database version, certain features may not work
+2019-07-17 15:24:36,575 INFO  [org.hibernate.engine.jdbc.env.internal.LobCreatorBuilderImpl] (ServerService Thread Pool -- 74) HHH000422: Disabling contextual LOB creation as connection was null
+2019-07-17 15:24:36,579 INFO  [org.hibernate.envers.boot.internal.EnversServiceImpl] (ServerService Thread Pool -- 74) Envers integration enabled? : true
+2019-07-17 15:24:36,950 INFO  [org.hibernate.validator.internal.util.Version] (ServerService Thread Pool -- 74) HV000001: Hibernate Validator 5.2.4.Final
+2019-07-17 15:24:37,113 INFO  [org.hibernate.tuple.PojoInstantiator] (ServerService Thread Pool -- 74) HHH000182: No default (no-argument) constructor for class: com.qa.persistence.domain.Account (class must be instantiated by Interceptor)
+2019-07-17 15:24:37,195 INFO  [org.hibernate.tool.hbm2ddl.SchemaExport] (ServerService Thread Pool -- 74) HHH000227: Running hbm2ddl schema export
+2019-07-17 15:24:37,221 INFO  [org.hibernate.tool.hbm2ddl.SchemaExport] (ServerService Thread Pool -- 74) HHH000230: Schema export complete
+2019-07-17 15:24:37,225 INFO  [org.hibernate.dialect.Dialect] (ServerService Thread Pool -- 74) HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2019-07-17 15:24:37,225 WARN  [org.hibernate.dialect.H2Dialect] (ServerService Thread Pool -- 74) HHH000431: Unable to determine H2 database version, certain features may not work
+2019-07-17 15:24:37,227 WARN  [org.hibernate.jpa.internal.schemagen.ScriptSourceInputFromFile] (ServerService Thread Pool -- 74) Specified schema generation script file [import.sql] did not exist for reading
+2019-07-17 15:24:37,228 WARN  [org.hibernate.jpa.internal.schemagen.JpaSchemaGenerator] (ServerService Thread Pool -- 74) Hibernate hbm2ddl-auto setting was specified [create-drop] in combination with JPA schema-generation; combination will likely cause trouble
+2019-07-17 15:24:37,255 INFO  [org.wildfly.extension.undertow] (ServerService Thread Pool -- 76) WFLYUT0021: Registered web context: /AccountSETemplate-0.0.1-SNAPSHOT
+2019-07-17 15:24:37,273 INFO  [org.jboss.as.server] (DeploymentScanner-threads - 1) WFLYSRV0010: Deployed "AccountSETemplate-0.0.1-SNAPSHOT.war" (runtime-name : "AccountSETemplate-0.0.1-SNAPSHOT.war")
+2019-07-17 16:27:33,285 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-7) WFLYSRV0027: Starting deployment of "AccountSETemplate-0.0.1-SNAPSHOT - Copy.war" (runtime-name: "AccountSETemplate-0.0.1-SNAPSHOT - Copy.war")
+2019-07-17 16:27:34,692 INFO  [org.jboss.as.jpa] (MSC service thread 1-6) WFLYJPA0002: Read persistence.xml for primary
+2019-07-17 16:27:34,708 INFO  [org.jboss.as.jpa] (ServerService Thread Pool -- 78) WFLYJPA0010: Starting Persistence Unit (phase 1 of 2) Service 'AccountSETemplate-0.0.1-SNAPSHOT - Copy.war#primary'
+2019-07-17 16:27:34,708 INFO  [org.hibernate.jpa.internal.util.LogHelper] (ServerService Thread Pool -- 78) HHH000204: Processing PersistenceUnitInfo [
+	name: primary
+	...]
+2019-07-17 16:27:34,724 INFO  [org.jboss.as.jpa] (ServerService Thread Pool -- 78) WFLYJPA0010: Starting Persistence Unit (phase 2 of 2) Service 'AccountSETemplate-0.0.1-SNAPSHOT - Copy.war#primary'
+2019-07-17 16:27:34,739 INFO  [org.hibernate.dialect.Dialect] (ServerService Thread Pool -- 78) HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2019-07-17 16:27:34,739 WARN  [org.hibernate.dialect.H2Dialect] (ServerService Thread Pool -- 78) HHH000431: Unable to determine H2 database version, certain features may not work
+2019-07-17 16:27:34,739 INFO  [org.hibernate.engine.jdbc.env.internal.LobCreatorBuilderImpl] (ServerService Thread Pool -- 78) HHH000422: Disabling contextual LOB creation as connection was null
+2019-07-17 16:27:34,739 INFO  [org.hibernate.envers.boot.internal.EnversServiceImpl] (ServerService Thread Pool -- 78) Envers integration enabled? : true
+2019-07-17 16:27:34,739 INFO  [org.hibernate.tuple.PojoInstantiator] (ServerService Thread Pool -- 78) HHH000182: No default (no-argument) constructor for class: com.qa.persistence.domain.Account (class must be instantiated by Interceptor)
+2019-07-17 16:27:34,739 INFO  [org.hibernate.tool.hbm2ddl.SchemaExport] (ServerService Thread Pool -- 78) HHH000227: Running hbm2ddl schema export
+2019-07-17 16:27:34,739 INFO  [org.hibernate.tool.hbm2ddl.SchemaExport] (ServerService Thread Pool -- 78) HHH000230: Schema export complete
+2019-07-17 16:27:34,755 INFO  [org.hibernate.dialect.Dialect] (ServerService Thread Pool -- 78) HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2019-07-17 16:27:34,755 WARN  [org.hibernate.dialect.H2Dialect] (ServerService Thread Pool -- 78) HHH000431: Unable to determine H2 database version, certain features may not work
+2019-07-17 16:27:34,755 WARN  [org.hibernate.jpa.internal.schemagen.ScriptSourceInputFromFile] (ServerService Thread Pool -- 78) Specified schema generation script file [import.sql] did not exist for reading
+2019-07-17 16:27:34,755 WARN  [org.hibernate.jpa.internal.schemagen.JpaSchemaGenerator] (ServerService Thread Pool -- 78) Hibernate hbm2ddl-auto setting was specified [create-drop] in combination with JPA schema-generation; combination will likely cause trouble
+2019-07-17 16:27:34,755 INFO  [org.wildfly.extension.undertow] (ServerService Thread Pool -- 79) WFLYUT0021: Registered web context: /AccountSETemplate-0.0.1-SNAPSHOT - Copy
+2019-07-17 16:27:34,770 INFO  [org.jboss.as.server] (DeploymentScanner-threads - 2) WFLYSRV0010: Deployed "AccountSETemplate-0.0.1-SNAPSHOT - Copy.war" (runtime-name : "AccountSETemplate-0.0.1-SNAPSHOT - Copy.war")
+2019-07-17 16:27:44,835 INFO  [org.wildfly.extension.undertow] (ServerService Thread Pool -- 79) WFLYUT0022: Unregistered web context: /AccountSETemplate-0.0.1-SNAPSHOT - Copy
+2019-07-17 16:27:44,835 INFO  [org.jboss.as.jpa] (ServerService Thread Pool -- 81) WFLYJPA0011: Stopping Persistence Unit (phase 2 of 2) Service 'AccountSETemplate-0.0.1-SNAPSHOT - Copy.war#primary'
+2019-07-17 16:27:44,851 INFO  [org.hibernate.tool.hbm2ddl.SchemaExport] (ServerService Thread Pool -- 81) HHH000227: Running hbm2ddl schema export
+2019-07-17 16:27:44,851 INFO  [org.hibernate.tool.hbm2ddl.SchemaExport] (ServerService Thread Pool -- 81) HHH000230: Schema export complete
+2019-07-17 16:27:44,851 INFO  [org.jboss.as.jpa] (ServerService Thread Pool -- 81) WFLYJPA0011: Stopping Persistence Unit (phase 1 of 2) Service 'AccountSETemplate-0.0.1-SNAPSHOT - Copy.war#primary'
+2019-07-17 16:27:44,882 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-3) WFLYSRV0028: Stopped deployment AccountSETemplate-0.0.1-SNAPSHOT - Copy.war (runtime-name: AccountSETemplate-0.0.1-SNAPSHOT - Copy.war) in 60ms
+2019-07-17 16:27:44,897 WARN  [org.jboss.as.controller] (DeploymentScanner-threads - 1) WFLYCTL0357: Notification of type deployment-undeployed is not described for the resource at the address []
+2019-07-17 16:27:44,897 INFO  [org.jboss.as.server] (DeploymentScanner-threads - 1) WFLYSRV0009: Undeployed "AccountSETemplate-0.0.1-SNAPSHOT - Copy.war" (runtime-name: "AccountSETemplate-0.0.1-SNAPSHOT - Copy.war")
+2019-07-17 16:27:59,940 INFO  [org.wildfly.extension.undertow] (ServerService Thread Pool -- 81) WFLYUT0022: Unregistered web context: /AccountSETemplate-0.0.1-SNAPSHOT
+2019-07-17 16:27:59,958 INFO  [org.jboss.as.jpa] (ServerService Thread Pool -- 83) WFLYJPA0011: Stopping Persistence Unit (phase 2 of 2) Service 'AccountSETemplate-0.0.1-SNAPSHOT.war#primary'
+2019-07-17 16:27:59,960 INFO  [org.hibernate.tool.hbm2ddl.SchemaExport] (ServerService Thread Pool -- 83) HHH000227: Running hbm2ddl schema export
+2019-07-17 16:27:59,966 INFO  [org.hibernate.tool.hbm2ddl.SchemaExport] (ServerService Thread Pool -- 83) HHH000230: Schema export complete
+2019-07-17 16:27:59,969 INFO  [org.jboss.as.jpa] (ServerService Thread Pool -- 83) WFLYJPA0011: Stopping Persistence Unit (phase 1 of 2) Service 'AccountSETemplate-0.0.1-SNAPSHOT.war#primary'
+2019-07-17 16:27:59,991 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-8) WFLYSRV0028: Stopped deployment AccountSETemplate-0.0.1-SNAPSHOT.war (runtime-name: AccountSETemplate-0.0.1-SNAPSHOT.war) in 57ms
+2019-07-17 16:28:00,015 WARN  [org.jboss.as.controller] (DeploymentScanner-threads - 2) WFLYCTL0357: Notification of type deployment-undeployed is not described for the resource at the address []
+2019-07-17 16:28:00,018 INFO  [org.jboss.as.repository] (DeploymentScanner-threads - 2) WFLYDR0002: Content removed from location C:\Users\Admin\Desktop\wildfly-10.1.0.Final\standalone\data\content\7c\7ae24ee33d73d022ae14236881fb3f18bb7ca1\content
+2019-07-17 16:28:00,018 INFO  [org.jboss.as.server] (DeploymentScanner-threads - 2) WFLYSRV0009: Undeployed "AccountSETemplate-0.0.1-SNAPSHOT.war" (runtime-name: "AccountSETemplate-0.0.1-SNAPSHOT.war")
+2019-07-17 16:28:20,147 INFO  [org.jboss.as.repository] (DeploymentScanner-threads - 1) WFLYDR0001: Content added at location C:\Users\Admin\Desktop\wildfly-10.1.0.Final\standalone\data\content\b7\93fca8bbb8823fad27e9b8243f618a40e4afd6\content
+2019-07-17 16:28:20,149 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-5) WFLYSRV0027: Starting deployment of "AccountSETemplate-0.0.1-SNAPSHOT.war" (runtime-name: "AccountSETemplate-0.0.1-SNAPSHOT.war")
+2019-07-17 16:28:22,186 INFO  [org.jboss.as.jpa] (MSC service thread 1-8) WFLYJPA0002: Read persistence.xml for primary
+2019-07-17 16:28:22,209 INFO  [org.jboss.as.jpa] (ServerService Thread Pool -- 84) WFLYJPA0010: Starting Persistence Unit (phase 1 of 2) Service 'AccountSETemplate-0.0.1-SNAPSHOT.war#primary'
+2019-07-17 16:28:22,209 INFO  [org.hibernate.jpa.internal.util.LogHelper] (ServerService Thread Pool -- 84) HHH000204: Processing PersistenceUnitInfo [
+	name: primary
+	...]
+2019-07-17 16:28:22,219 INFO  [org.jboss.as.jpa] (ServerService Thread Pool -- 84) WFLYJPA0010: Starting Persistence Unit (phase 2 of 2) Service 'AccountSETemplate-0.0.1-SNAPSHOT.war#primary'
+2019-07-17 16:28:22,221 INFO  [org.hibernate.dialect.Dialect] (ServerService Thread Pool -- 84) HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2019-07-17 16:28:22,221 WARN  [org.hibernate.dialect.H2Dialect] (ServerService Thread Pool -- 84) HHH000431: Unable to determine H2 database version, certain features may not work
+2019-07-17 16:28:22,222 INFO  [org.hibernate.engine.jdbc.env.internal.LobCreatorBuilderImpl] (ServerService Thread Pool -- 84) HHH000422: Disabling contextual LOB creation as connection was null
+2019-07-17 16:28:22,224 INFO  [org.hibernate.envers.boot.internal.EnversServiceImpl] (ServerService Thread Pool -- 84) Envers integration enabled? : true
+2019-07-17 16:28:22,238 INFO  [org.hibernate.tool.hbm2ddl.SchemaExport] (ServerService Thread Pool -- 84) HHH000227: Running hbm2ddl schema export
+2019-07-17 16:28:22,239 INFO  [org.hibernate.tool.hbm2ddl.SchemaExport] (ServerService Thread Pool -- 84) HHH000476: Executing import script '/import.sql'
+2019-07-17 16:28:22,240 ERROR [org.hibernate.tool.hbm2ddl.SchemaExport] (ServerService Thread Pool -- 84) HHH000388: Unsuccessful: INSERT INTO Account (firstName) VALUES ('John')(lastName) VALUES ('Doe')(accountNumber) VALUES ('1234')
+2019-07-17 16:28:22,240 ERROR [org.hibernate.tool.hbm2ddl.SchemaExport] (ServerService Thread Pool -- 84) Syntax error in SQL statement "INSERT INTO ACCOUNT (FIRSTNAME) VALUES ('John')([*]LASTNAME) VALUES ('Doe')(ACCOUNTNUMBER) VALUES ('1234') "; SQL statement:
+INSERT INTO Account (firstName) VALUES ('John')(lastName) VALUES ('Doe')(accountNumber) VALUES ('1234') [42000-173]
+2019-07-17 16:28:22,241 ERROR [org.hibernate.tool.hbm2ddl.SchemaExport] (ServerService Thread Pool -- 84) HHH000388: Unsuccessful: INSERT INTO Account (firstName) VALUES ('Jane')(lastName) VALUES ('Doe')(accountNumber) VALUES ('1235')
+2019-07-17 16:28:22,241 ERROR [org.hibernate.tool.hbm2ddl.SchemaExport] (ServerService Thread Pool -- 84) Syntax error in SQL statement "INSERT INTO ACCOUNT (FIRSTNAME) VALUES ('Jane')([*]LASTNAME) VALUES ('Doe')(ACCOUNTNUMBER) VALUES ('1235') "; SQL statement:
+INSERT INTO Account (firstName) VALUES ('Jane')(lastName) VALUES ('Doe')(accountNumber) VALUES ('1235') [42000-173]
+2019-07-17 16:28:22,241 ERROR [org.hibernate.tool.hbm2ddl.SchemaExport] (ServerService Thread Pool -- 84) HHH000388: Unsuccessful: INSERT INTO Account (firstName) VALUES ('Jim')(lastName) VALUES ('Taylor')(accountNumber) VALUES ('1236')
+2019-07-17 16:28:22,241 ERROR [org.hibernate.tool.hbm2ddl.SchemaExport] (ServerService Thread Pool -- 84) Syntax error in SQL statement "INSERT INTO ACCOUNT (FIRSTNAME) VALUES ('Jim')([*]LASTNAME) VALUES ('Taylor')(ACCOUNTNUMBER) VALUES ('1236') "; SQL statement:
+INSERT INTO Account (firstName) VALUES ('Jim')(lastName) VALUES ('Taylor')(accountNumber) VALUES ('1236') [42000-173]
+2019-07-17 16:28:22,241 INFO  [org.hibernate.tool.hbm2ddl.SchemaExport] (ServerService Thread Pool -- 84) HHH000230: Schema export complete
+2019-07-17 16:28:22,242 INFO  [org.hibernate.dialect.Dialect] (ServerService Thread Pool -- 84) HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2019-07-17 16:28:22,243 WARN  [org.hibernate.dialect.H2Dialect] (ServerService Thread Pool -- 84) HHH000431: Unable to determine H2 database version, certain features may not work
+2019-07-17 16:28:22,245 WARN  [org.hibernate.jpa.internal.schemagen.JpaSchemaGenerator] (ServerService Thread Pool -- 84) Hibernate hbm2ddl-auto setting was specified [create-drop] in combination with JPA schema-generation; combination will likely cause trouble
+2019-07-17 16:28:22,246 ERROR [org.jboss.msc.service.fail] (ServerService Thread Pool -- 84) MSC000001: Failed to start service jboss.persistenceunit."AccountSETemplate-0.0.1-SNAPSHOT.war#primary": org.jboss.msc.service.StartException in service jboss.persistenceunit."AccountSETemplate-0.0.1-SNAPSHOT.war#primary": javax.persistence.PersistenceException: Unable to execute JPA schema generation create command [INSERT INTO Account (firstName) VALUES ('John')(lastName) VALUES ('Doe')(accountNumber) VALUES ('1234')]
+	at org.jboss.as.jpa.service.PersistenceUnitServiceImpl$1$1.run(PersistenceUnitServiceImpl.java:179)
+	at org.jboss.as.jpa.service.PersistenceUnitServiceImpl$1$1.run(PersistenceUnitServiceImpl.java:121)
+	at org.wildfly.security.manager.WildFlySecurityManager.doChecked(WildFlySecurityManager.java:667)
+	at org.jboss.as.jpa.service.PersistenceUnitServiceImpl$1.run(PersistenceUnitServiceImpl.java:193)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+	at org.jboss.threads.JBossThread.run(JBossThread.java:320)
+Caused by: javax.persistence.PersistenceException: Unable to execute JPA schema generation create command [INSERT INTO Account (firstName) VALUES ('John')(lastName) VALUES ('Doe')(accountNumber) VALUES ('1234')]
+	at org.hibernate.jpa.internal.schemagen.GenerationTargetToDatabase.acceptCreateCommands(GenerationTargetToDatabase.java:47)
+	at org.hibernate.jpa.internal.schemagen.JpaSchemaGenerator.doGeneration(JpaSchemaGenerator.java:496)
+	at org.hibernate.jpa.internal.schemagen.JpaSchemaGenerator.access$300(JpaSchemaGenerator.java:55)
+	at org.hibernate.jpa.internal.schemagen.JpaSchemaGenerator$GenerationProcess.execute(JpaSchemaGenerator.java:171)
+	at org.hibernate.jpa.internal.schemagen.JpaSchemaGenerator.performGeneration(JpaSchemaGenerator.java:65)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:885)
+	at org.jboss.as.jpa.hibernate5.TwoPhaseBootstrapImpl.build(TwoPhaseBootstrapImpl.java:44)
+	at org.jboss.as.jpa.service.PersistenceUnitServiceImpl$1$1.run(PersistenceUnitServiceImpl.java:161)
+	... 7 more
+Caused by: org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO ACCOUNT (FIRSTNAME) VALUES ('John')([*]LASTNAME) VALUES ('Doe')(ACCOUNTNUMBER) VALUES ('1234') "; SQL statement:
+INSERT INTO Account (firstName) VALUES ('John')(lastName) VALUES ('Doe')(accountNumber) VALUES ('1234') [42000-173]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:331)
+	at org.h2.message.DbException.get(DbException.java:171)
+	at org.h2.message.DbException.get(DbException.java:148)
+	at org.h2.message.DbException.getSyntaxError(DbException.java:183)
+	at org.h2.command.Parser.getSyntaxError(Parser.java:487)
+	at org.h2.command.Parser.prepareCommand(Parser.java:233)
+	at org.h2.engine.Session.prepareLocal(Session.java:428)
+	at org.h2.engine.Session.prepareCommand(Session.java:377)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1138)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:168)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:156)
+	at org.jboss.jca.adapters.jdbc.WrappedStatement.execute(WrappedStatement.java:198)
+	at org.hibernate.jpa.internal.schemagen.GenerationTargetToDatabase.acceptCreateCommands(GenerationTargetToDatabase.java:44)
+	... 14 more
+
+2019-07-17 16:28:22,250 ERROR [org.jboss.as.controller.management-operation] (DeploymentScanner-threads - 1) WFLYCTL0013: Operation ("deploy") failed - address: ([("deployment" => "AccountSETemplate-0.0.1-SNAPSHOT.war")]) - failure description: {
+    "WFLYCTL0080: Failed services" => {"jboss.persistenceunit.\"AccountSETemplate-0.0.1-SNAPSHOT.war#primary\"" => "org.jboss.msc.service.StartException in service jboss.persistenceunit.\"AccountSETemplate-0.0.1-SNAPSHOT.war#primary\": javax.persistence.PersistenceException: Unable to execute JPA schema generation create command [INSERT INTO Account (firstName) VALUES ('John')(lastName) VALUES ('Doe')(accountNumber) VALUES ('1234')]
+    Caused by: javax.persistence.PersistenceException: Unable to execute JPA schema generation create command [INSERT INTO Account (firstName) VALUES ('John')(lastName) VALUES ('Doe')(accountNumber) VALUES ('1234')]
+    Caused by: org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement \"INSERT INTO ACCOUNT (FIRSTNAME) VALUES ('John')([*]LASTNAME) VALUES ('Doe')(ACCOUNTNUMBER) VALUES ('1234') \"; SQL statement:
+INSERT INTO Account (firstName) VALUES ('John')(lastName) VALUES ('Doe')(accountNumber) VALUES ('1234') [42000-173]"},
+    "WFLYCTL0412: Required services that are not installed:" => ["jboss.persistenceunit.\"AccountSETemplate-0.0.1-SNAPSHOT.war#primary\""],
+    "WFLYCTL0180: Services with missing/unavailable dependencies" => undefined
+}
+2019-07-17 16:28:22,265 INFO  [org.jboss.as.server] (DeploymentScanner-threads - 1) WFLYSRV0010: Deployed "AccountSETemplate-0.0.1-SNAPSHOT.war" (runtime-name : "AccountSETemplate-0.0.1-SNAPSHOT.war")
+2019-07-17 16:28:22,265 INFO  [org.jboss.as.controller] (DeploymentScanner-threads - 1) WFLYCTL0183: Service status report
+WFLYCTL0186:   Services which failed to start:      service jboss.persistenceunit."AccountSETemplate-0.0.1-SNAPSHOT.war#primary": org.jboss.msc.service.StartException in service jboss.persistenceunit."AccountSETemplate-0.0.1-SNAPSHOT.war#primary": javax.persistence.PersistenceException: Unable to execute JPA schema generation create command [INSERT INTO Account (firstName) VALUES ('John')(lastName) VALUES ('Doe')(accountNumber) VALUES ('1234')]
+
