@@ -13,8 +13,8 @@ public class Project {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int projectId;
 	
-	@ManyToOne//(mappedBy = "userId")
 //	@Column(name = "user_id")
+	@ManyToOne//(mappedBy = "userId")
 	private User user;
 	private String projectName;
 
@@ -24,11 +24,6 @@ public Project(int projectId, User user, String projectName) {
 		this.projectId = projectId;
 		this.user = user;
 		this.projectName = projectName;
-	}
-
-
-public Project(){
-		
 	}
 
 

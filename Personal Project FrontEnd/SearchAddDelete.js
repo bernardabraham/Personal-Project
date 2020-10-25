@@ -41,6 +41,7 @@ function panelSearch() {
 
 function appendProject() {
 
+    console.log("hi there");
     projectIdTasks = getHighestProjectId()
     f = document.getElementById("form1");
     sidebarId = document.getElementById("sidebarId");
@@ -78,6 +79,14 @@ function appendProject() {
 
     userData1 = [];
 
+    console.log("hellothere");
+    console.log(v);
+    console.log(m);
+    let v = 0;
+    let m = 0;
+    progressBar();
+    console.log(v);
+    console.log(m);
 }
 
 
